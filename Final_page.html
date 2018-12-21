@@ -1,0 +1,1408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>Video Intro.   Syntax  |   Gallery   GitHub QnA Markup Editor BETA  MarkupStyle   Load File   New</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Video Intro.   Syntax  |   Gallery   GitHub QnA Markup Editor BETA  MarkupStyle   Load File   New"/>
+	<meta property="og:description" content="Dylan C. Barrett"/>
+	<meta property="og:image" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="apple-touch-icon" href="https://www.qnamarkup.org/images/QnA_300.png"/>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="startAT('1');"><style>	
+
+	body {
+
+		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+
+	}
+
+
+
+	#rawmarkup{
+
+		display:none;
+
+	}
+
+	
+
+	#QandA img{
+
+		width:100%;
+
+	}
+
+
+
+	div.main{
+
+		min-width:300px;
+
+		max-width:650px;
+
+		margin: 0 auto;
+
+	padding:0 5px 0 5px;
+
+		}
+
+	div.frame{
+
+		float:left;
+
+		width:100%;
+
+		margin:5px 0 5px 0;
+
+	}
+
+	div.full{
+
+		float:left;
+
+		width:100%;
+
+	}
+
+	.button{
+
+		padding:8px;
+
+		margin:8px 0 0px 0;
+
+		width:100%;
+
+	}
+
+	div.question_text{
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		color:#ffffff;
+
+		min-width:30px;
+
+		background:#5489eb;
+
+		border-radius: 15px;
+
+		padding:10px 15px 14px 15px;
+
+		margin-right:45px;
+
+	}
+
+
+
+	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; } 
+
+
+
+	div.question_arrow{
+
+		float:left; 
+
+		width: 0; 
+
+		height: 0; 
+
+		border-left: 5px solid transparent; 
+
+		border-right: 10px solid transparent; 
+
+		border-top: 15px solid #5489eb;
+
+		margin:0 20px;
+
+	}
+
+	div.ans_text{
+
+		float:right;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		color:#000000;
+
+		min-width:30px;
+
+		background:#eeeeee;
+
+		border-radius: 15px;
+
+		padding:10px 15px 14px 15px;
+
+		margin-left:45px;
+
+	}
+
+	div.ans_arrow{
+
+		float:right; 
+
+		width: 0; 
+
+		height: 0; 
+
+		border-left: 10px solid transparent; 
+
+		border-right: 5px solid transparent; 
+
+		border-top: 15px solid #eeeeee;
+
+		margin:0 20px;
+
+	}
+
+	div.choices{
+
+		float:left;
+
+		width:100%;
+
+		margin:15px 0 0 0;
+
+	}
+
+	div.standard_buttons{
+
+		float:left;
+
+		width:100%;
+
+		margin-top:5px;
+
+		border-top: 1px solid #ddd; 
+
+		padding-top:12px;		
+
+	}
+
+	div.credits{
+
+		float:left;
+
+		dispaly:none;
+
+		width:100%;
+
+		background:#eee;
+
+		margin:0px 0 15px 0;
+
+	}
+
+	div.credit_text{
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		padding:4px 15px 10px 15px;
+
+	}
+
+	li.error{
+
+		list-style-type: none;
+
+		background:#ffdddd;
+
+		margin: 10px 0 0 0;
+
+		padding: 5px;
+
+	}
+
+
+
+	.qpad {
+
+		float:left;
+
+		padding:0 15px;
+
+	}
+
+	
+
+	a.sbutton {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:48%;
+
+		background: #eee;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 3px 0;
+
+		border: solid 1px #888;
+
+		text-align:center;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.sbutton:hover, a.sbutton:active {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:48%;
+
+		background: #ddd;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 3px 0;
+
+		border: solid 1px #888;
+
+		text-align:center;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.qabutton {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:100%;
+
+		background: #eee;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 8px 0;
+
+		border: solid 1px #888;
+
+		text-align:left;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.qabutton:hover, a.qabutton:active {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:100%;
+
+		background: #ddd;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 8px 0;
+
+		border: solid 1px #888;
+
+		text-align:left;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+	
+
+
+
+	div.xdiv {
+
+		float:left;
+
+		width:100%;
+
+		margin: 0 0 8px 0;
+
+		background: #eee;
+
+		border: solid 1px #888;
+
+		border-radius: 8px;
+
+	}	
+
+
+
+	input.xinput {
+
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */ 
+
+		box-sizing: border-box;         /* Opera/IE 8+ */
+
+		float:left;
+
+		width:100%;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		background: #fff;
+
+		border-top-left-radius: 8px;
+
+		border-top-right-radius: 8px;
+
+		padding:10px 10px 12px 10px;
+
+		border: solid 0px #888;
+
+		border-bottom: solid 1px #888;
+
+		text-align:left;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+	
+
+	a.xbutton {
+
+		float:left;
+
+		width:100%;
+
+		text-align:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		background: #eee;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0px;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+	
+
+	a.xbutton:hover, a.xbutton:active {
+
+		border-top-left-radius: 0px;
+
+		border-top-right-radius: 0px;
+
+		background: #ddd;
+
+	}
+
+</style>
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"> This is Class project for Suffolk University Law School <a href= "http://www.codingthelaw.org/">http://www.codingthelaw.org/</a>
+<div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id="rawmarkup" style="display:none;">Video+Intro.+++Syntax++%7C+++Gallery+++GitHub+QnA+Markup+Editor+BETA++MarkupStyle+++Load+File+++New+%0D%0ATitle%3A+Small+Firm+Efficiency+and+Security+Interview%0D%0AAuthor%3A+Dylan+C.+Barrett%0D%0ADescription%3A+This+is+Class+project+for+Suffolk+University+Law+School+%3Ca+href%3D+%22http%3A%2F%2Fwww.codingthelaw.org%2F%22%3Ehttp%3A%2F%2Fwww.codingthelaw.org%2F%3C%2Fa%3E%0D%0ABefore%3A%0D%0A%3Ch1+style%3D%22text-align%3Acenter%3B%22%3ESmall+Firm+Efficiency+and+Security+Q%26A%3C%2Fh1%3E%3Cp+style%3D%22text-align%3Acenter%3B%22%3E%3Ca+href%3D%22http%3A%2F%2Fwww.codingthelaw.org%2F%22%3ECoding+the+Law%3C%2Fa%3E%3Cbr%3ESuffolk+University+Law+School%2C+Fall+2018%3C%2Fp%3E%0D%0A%0D%0AQ%28intro%29%3A+Do+%3Cb%3ENOT%3C%2Fb%3E+rely+on+this+interview+or+treat+this+interview+as+legal+advice%21+This+interview+is+a+class+project+and+is+likely+incomplete.%0D%0A%3Cp%3EThis+is+a+%3Ca+href%3D%22http%3A%2F%2Fwww.codingthelaw.org%2F%22%3ECoding+the+Law%3C%2Fa%3E+class+project+for+Suffolk+University+Law+School%2C+Fall+2018%3C%2Fp%3E%0D%0A%0D%0AA%3A+By+clicking+here%2C+I+am+confirming+that+I+understand%3A%0D%0A%09%3Col+type%3D%221%22%3E%0D%0A+%3Cli%3EThis+Q%26A+is+a+%3Cb%3Eclass+project.%3C%2Fb%3E%3C%2Fli%3E%0D%0A+%3Cli%3EThese+questions+and+results+%3Cb%3Edo+not%3C%2Fb%3E+constitute+legal+advice.%3C%2Fli%3E%0D%0A+%3Cli%3EI+%3Cb%3Eshould+not+rely%3C%2Fb%3E+on+the+information+provided+in+this+Q%26A.%3C%2Fli%3E%0D%0A+%3C%2Fol%3E%0D%0A%09Q%281.1%29%3AGOTO%3Acase_management%0D%0A%0D%0AQ%28case_management%29%3A+Do+you+make+use+of+a+%3Cb%3Ecase+management%3C%2Fb%3E+software%3F%0D%0AA%28%3Cb%3ECase+Management+Software%3A%3C%2Fb%3E+Case+management+software+may+resolve+some+of+the+issues+in+this+questionnaire.%29%3A+Yes%0D%0A%09DOC%282.1%29%3A+%3Cx%3ECase+management+software+may+resolve+some+of+the+issues+in+this+questionnaire.%3C%2Fx%3E%0D%0A%09Q%28case_mgmt_yes%29%3AGOTO%3Acase_mgmt_warning%0D%0AA%28%3Cb%3E+Case+Management+Software%3A%3C%2Fb%3E+Consider+a+case+management+software%2C+as+it+will+solve+many+of+these+issues+simultaneously.%29%3A+No%0D%0A%09DOC%282.2%29%3A+%3Cx%3E%3Cb%3E+Case+Management+Software%3A%3C%2Fb%3E+Consider+a+case+management+software%2C+as+it+will+solve+many+of+these+issues+simultaneously.%3C%2Fx%3E%0D%0A%09Q%28case_management_2%29%3AGOTO%3Awork_personal_computer%0D%0A%0D%0AQ%28case_mgmt_warning%29%3A+If+you+make+use+of+Case+Management+software%2C+some+of+these+questions+may+not+apply.+Additionally%2C+your+current+software+may+provide+embedded+solutions+to+many+suggestions+provided+by+this+interview.+It+is+recommended+you+review+the+features+available+to+you+through+your+software+license.%0D%0AA%3A+I+understand.%0D%0A%09Q%283.1%29%3AGOTO%3Awork_personal_computer%0D%0A%0D%0AQ%28work_personal_computer%29%3A+Do+you+store+client+documents+on+a+work+or+personal+computer%3F+%28Locally+on+the+computer%27s+hard+drive%3F%29%0D%0AA%3A+Yes%0D%0A%09Q%28work_personal_computer_yes%29%3A+Is+this+the+only+place+that+you+store+them%3F%0D%0A%09A%28%3Cb%3ELocal+Storage%3A%3C%2Fb%3E+Storing+documents+exclusively+on+a+single+computer+risks+losing+those+files+if+the+computer+suffers+a+fatal+error.+Additionally%2C+this+leaves+important+documents+vulnerable+to+computer+viruses%2C+malware%2C+and+ransomware.%29%3A+Yes%0D%0A%09%09DOC%284.1.1%29%3A%3Cx%3E%3Cb%3ELocal+Storage%3A%3C%2Fb%3E+Storing+documents+exclusively+on+a+single+computer+risks+losing+those+files+if+the+computer+suffers+a+fatal+error.+Additionally%2C+this+leaves+important+documents+vulnerable+to+computer+viruses%2C+malware%2C+and+ransomware.%3C%2Fx%3E%0D%0A%09%09Q%28work_personal_computer_yes_2%29%3AGOTO%3Acomputer_pword%0D%0A%09A%3A+No%0D%0A%09%09DOC%284.1.2%29%3A%3Cx%3E%3Cb%3ELocal+Storage%3A%3C%2Fb%3E+Storing+documents+exclusively+on+a+single+computer+risks+losing+those+files+if+the+computer+suffers+a+fatal+error.+Additionally%2C+this+leaves+important+documents+vulnerable+to+computer+viruses%2C+malware%2C+and+ransomware.%3C%2Fx%3E%0D%0A%09%09Q%284.1.2%29%3AGOTO%3Astore_docs%0D%0AA%3A+No%0D%0A%09Q%28work_personal_computer_no%29%3AGOTO%3Astore_docs%0D%0A%0D%0AQ%28store_docs%29%3A+Where+do+you+store+these+documents%3F%0D%0AA%3A+Cloud+Storage+Service%0D%0A%09Q%28cloud_access%29%3A+Do+others+have+access+to+this+drive%3F%0D%0A%09A%28%3Cb%3ECloud+Storage+%26+User+Access%3A%3C%2Fb%3E+Cloud+drive+services+provide+users+with+tools+to+track+access%2C+including+who+has+access+to+specific+documents%2C+folders%2C+and+access+to+the+entire+drive.+Track+this+information+and+ensure+access+is+restricted+only+to+those+who+need+it.%29%3A+Yes%0D%0A%09%09DOC%285.1.1%29%3A%3Cx%3E%3Cb%3ECloud+Storage+%26+User+Access%3A%3C%2Fb%3E+Cloud+drive+services+provide+users+with+tools+to+track+access%2C+including+who+has+access+to+specific+documents%2C+folders%2C+and+access+to+the+entire+drive.+Track+this+information+and+ensure+access+is+restricted+only+to+those+who+need+it.%3C%2Fx%3E%0D%0A%09%09Q%28cloud_access_2%29%3AGOTO%3Aclient_docs_email%0D%0A%09A%3A+No%0D%0A%09%09Q%28cloud_access_3%29%3AGOTO%3Aclient_docs_email%0D%0AA%3A+Local+Network+Drive%0D%0A%09Q%28local_drive_access%29%3A+Do+others+have+access+to+this+local+drive%3F%0D%0A%09A%28%3Cb%3ELocal+Network+Drive+Users%3A%3C%2Fb%3E+Carefully+track+who+has+access+to+networked+drives.+Consider+making+use+of+tools+that+assign+user+credentials%2C+limit+access%2C+track+access%2C+and+provide+reports.+Consider+keeping+sensitive+documents+on+a+separate+drive.%29%3A+Yes%0D%0A%09%09DOC%285.2.1%29%3A%3Cx%3ECarefully+track+who+has+access+to+networked+drives.+Consider+making+use+of+tools+that+assign+user+credentials%2C+limit+access%2C+track+access%2C+and+provide+reports.+Consider+keeping+sensitive+documents+on+a+separate+drive.%3C%2Fx%3E%0D%0A%09%09Q%28local_drive_access_2%29%3AGOTO%3Adrive_pword%0D%0A%09A%3A+No%0D%0A%09%09Q%28local_drive_access_3%29%3AGOTO%3Aclient_docs_email%0D%0AA%3A+Both%0D%0A%09Q%285.3%29%3AGOTO%3Aclient_docs_email%0D%0A%0D%0AQ%28drive_pword%29%3A+Is+the+drive+password+protected%3F%0D%0AA%3A+Yes%0D%0A%09Q%28drive_pword_yes%29%3AGOTO%3Aclient_docs_email%0D%0AA%28Files+on+a+network+drive+are+vulnerable+to+any+unauthorized+or+malicious+party+that+has+access+to+the+network%2C+or+even+other+devices+on+the+network.+Adding+a+password+to+protect+the+drive+makes+it+more+difficult+for+adverse+parties%2C+viruses%2C+and+other+risks+to+access+your+information.%29%3A+No%0D%0A%09DOC%286.2%29%3A+%3Cx%3EFiles+on+a+network+drive+is+vulnerable+to+any+unauthorized+or+malicious+party+that+has+access+to+the+network%2C+or+even+other+devices+on+the+network.+Adding+a+password+to+protect+the+drive+makes+it+more+difficult+for+adverse+parties%2C+viruses%2C+and+other+risks+to+access+your+information.%3C%2Fx%3E%0D%0A%09Q%28docs_pword%29%3A+Are+documents+or+folders+in+the+drive+password+protected%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%28docs_pword_yes%29%3AGOTO%3Aclient_docs_email%0D%0A%09A%28%3Cb%3EFile+%26+Document+Passwords%3A%3C%2Fb%3E+Files+and+documents+on+a+network+drive+are+vulnerable+to+any+unauthorized+or+malicious+party+that+has+access+to+the+network%2C+or+even+other+devices+on+the+network.+Adding+a+password+to+protect+important+documents+makes+it+more+difficult+for+adverse+parties%2C+viruses%2C+and+other+risks+to+access+your+information%2C+however%2C+adding+a+password+to+the+drive+itself+is+also+helpful%2C+and+requires+fewer+passwords.%29%3A+No%0D%0A%09%09DOC%286.2.2%29%3A+%3Cx%3E%3Cb%3EFile+%26+Document+Passwords%3A%3C%2Fb%3E+Files+and+documents+on+a+network+drive+are+vulnerable+to+any+unauthorized+or+malicious+party+that+has+access+to+the+network%2C+or+even+other+devices+on+the+network.+Adding+a+password+to+protect+important+documents+makes+it+more+difficult+for+adverse+parties%2C+viruses%2C+and+other+risks+to+access+your+information%2C+however%2C+adding+a+password+to+the+drive+itself+is+also+helpful%2C+and+requires+fewer+passwords.%3C%2Fx%3E%0D%0A%09%09Q%28docs_pword_no%29%3AGOTO%3Aclient_docs_email%0D%0A%0D%0AQ%28client_docs_email%29%3A+Do+you+send+sensitive+client+documents+or+information+over+email%3F%0D%0A%3Cp%3E+This+includes+information+you+have+entered+into+the+body+of+the+E-Mail+or+information+found+within+attached+documents.%3C%2Fp%3E%0D%0AA%3A+Yes%0D%0A%09Q%28client_docs_email_yes%29%3AGOTO%3Aclient_same%0D%0AA%3A+No+-+%3Cb%3ENEVER.%3C%2Fb%3E%0D%0A%09Q%28how_send_if_not_email%29%3A+How+do+you+send+documents+to+clients%3F%0D%0A%09A%28%3Cb%3ECloud+Document+Sharing%3A%3C%2Fb%3E+When+sharing+documents+with+others+over+cloud+services%2C+make+sure+to+verify+permissions+used.+If+you+do+not+want+a+recipient+to+have+permanent+access+to+a+document%2C+or+the+ability+to+alter+the+document+or+view+changes+you+might+make+to+the+same+document%2C+verify+that+you+can+set+access+permissions+to+expire.%29%3A+Cloud+Sharing+Service%0D%0A%09%09DOC%287.2.1%29%3A%3Cx%3E%3Cb%3ECloud+Document+Sharing%3A%3C%2Fb%3E+When+sharing+documents+with+others+over+cloud+services%2C+make+sure+to+verify+permissions+used.+If+you+do+not+want+a+recipient+to+have+permanent+access+to+a+document%2C+or+the+ability+to+alter+the+document+or+view+changes+you+might+make+to+the+same+document%2C+verify+that+you+can+set+access+permissions+to+expire.%3C%2FX%3E+%0D%0A%09%09Q%287.2.1%29%3A+Do+you+use+this+cloud+service+to+secure+signatures+for+documents+that+require+signing%3F%0D%0A%09%09A%3A+Yes%0D%0A%09%09%09Q%287.2.1.1%29%3AGOTO%3Aclient_collab%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%287.2.1.2%29%3AGOTO%3Aclient_sign%0D%0A%09A%3A+Secure+File+Sharing+Service%0D%0A%09%09Q%287.2.2%29%3A+Do+you+use+this+file+sharing+service+to+secure+signatures%3F%0D%0A%09%09A%3A+Yes%0D%0A%09%09%09Q%287.2.2.1%29%3AGOTO%3Aclient_collab%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%287.2.2.2%29%3AGOTO%3Aclient_sign%0D%0A%09A%3A+None+of+the+Above.%0D%0A%09%09Q%287.2.3%29%3AGOTO%3Aclient_sign%0D%0A%0D%0AQ%28client_same%29%3A+Do+clients+do+the+same%3F%0D%0AA%3A+Yes%0D%0A%09Q%288.1%29%3AGOTO%3Apaid_or_free%0D%0AA%3A+No%0D%0A%09Q%288.2%29%3AGOTO%3Apaid_or_free%0D%0A%0D%0AQ%28paid_or_free%29%3ADo+you+use+a+paid+E-mail+service%2C+or+a+free+E-mail+service%3F%0D%0AA%3A+Paid%0D%0A%09Q%289.1%29%3AGOTO%3Aclient_sign%0D%0AA%28%3Cb%3EFree+E-Mail+Service%3A%3C%2Fb%3E+Free+E-Mail+providers+generally+do+not+have+rigorous+privacy+and+data+security+standards.+It+is+important+you+research+your+provider%27s+privacy+and+security+practices+and+consider+making+use+of+a+paid+E-Mail+service.%29%3A+Free%0D%0A%09DOC%289.2%29%3A%3Cx%3E%3Cb%3EFree+E-Mail+Service%3A%3C%2Fb%3E+Free+E-Mail+providers+generally+do+not+have+rigorous+privacy+and+data+security+standards.+It+is+important+you+research+your+provider%27s+privacy+and+security+practices+and+consider+making+use+of+a+paid+E-Mail+service.%3C%2Fx%3E%0D%0A%09Q%289.2%29%3AGOTO%3Aclient_sign%0D%0A%0D%0AQ%28client_sign%29%3AHow+do+you+have+clients+%28or+any+other+parties%29+sign+documents%3F%0D%0AA%28%3Cb%3EDocument+Signatures%3A%3C%2Fb%3E+Consider+an+E-Signature+tool.+This+allows+you+to+acquire+signatures+whenever+you+need+them%2C+so+long+as+the+signing+party+has+access+to+a+computer%2C+tablet%2C+or+smartphone.%29%3A+Using+mail%2C+E-Mail%2C+Fax%2C+or+in-person+meetings+with+the+person+who+must+sign.%0D%0A%09DOC%2810.1%29%3A%3Cx%3E%3Cb%3EDocument+Signatures%3A%3C%2Fb%3E+Consider+an+E-Signature+tool.+This+allows+you+to+acquire+signatures+whenever+you+need+them%2C+so+long+as+the+signing+party+has+access+to+a+computer%2C+tablet%2C+or+smartphone.%3C%2Fx%3E%0D%0A%09Q%2810.1%29%3AGOTO%3Aclient_collab%0D%0AA%3A+An+electronic+signature+software.%0D%0A%09Q%2810.2%29%3AGOTO%3Aclient_collab%0D%0A%0D%0AQ%28client_collab%29%3A+If+you+need+to+collaboratively+work+on+a+document%2C+such+as+interrogatories%2C+contracts%2C+motions%2C+etc%2C+with+clients+or+colleagues%2C+do+you+make+use+of+a+screen+sharing+tool%3F%0D%0AA%3A+Yes%0D%0A%09Q%2811.1%29%3AGOTO%3Acomputer_pword%0D%0AA%28%3Cb%3EDocument+Collaboration%3A%3C%2Fb%3E+Try+a+screen+sharing+tool%21+These+tools+allow+you+to+work+on+documents+in+real+time+with+others%2C+with+no+need+to+exchange+multiple+copies.%29%3A+No%0D%0A%09DOC%2811.2%29%3A%3Cx%3E%3Cb%3EDocument+Collaboration%3A%3C%2Fb%3E+Try+a+screen+sharing+tool%21+These+tools+allow+you+to+work+on+documents+in+real+time+with+others%2C+with+no+need+to+exchange+multiple+copies.%3C%2Fx%3E%0D%0A%09Q%2811.2%29%3AGOTO%3Acomputer_pword%0D%0A%0D%0AQ%28computer_pword%29%3A+Is+your+computer+password+protected%3F%0D%0AA%3A+Yes%0D%0A%09Q%28computer_pword_yes%29%3AGOTO%3Acomp_lock%0D%0AA%28%3Cb%3EComputer+Password+Protection%3A%3C%2Fb%3E+It+is+essential+that+you+lock+and+password+protect+any+computer%2C+personal+or+business%21+Make+sure+to+password+protect+your+computer+and+set+it+to+automatically+lock+after+a+period+of+idleness.%29%3A+No%0D%0A%09DOC%2812.2%29%3A%3Cx%3E%3Cb%3EComputer+Password+Protection%3A%3C%2Fb%3E+It+is+essential+that+you+lock+and+password+protect+any+computer%2C+personal+or+business%21+Make+sure+to+password+protect+your+computer+and+set+it+to+automatically+lock+after+a+period+of+idleness.%3C%2Fx%3E%0D%0A%09Q%28computer_pword_no%29%3AGOTO%3Alocal_docs_pword%0D%0A%0D%0AQ%28local_docs_pword%29%3A+Are+the+documents+stored+on+your+computer+password+protected%2C+and%2For+are+the+folders+the+documents+are+kept+in+password+protected+or+encrypted%2C+or+both%3F%0D%0AA%3A+Yes%0D%0A%09Q%28local_docs_pword_yes%29%3AGOTO%3Acomp_lock%0D%0AA%3A+No%0D%0A%09Q%28local_docs_pword_no%29%3AGOTO%3Acomp_lock%0D%0A%0D%0AQ%28comp_lock%29%3A+is+your+computer+hard+drive+encrypted%3F%0D%0AA%3A+Yes%0D%0A%09Q%28comp_lock_yes%29%3AGOTO%3Asmartphone%0D%0AA%28%3Cb%3EHard+Drive+Encryption%3A%3C%2Fb%3E+Encrypting+your+hard+drive+adds+a+simple%2C+fast%2C+and+free+way+to+reduce+your+exposure+to+data+theft+and+other+malicious+attacks+on+your+computer.%29%3A+No%2FNot+Sure%0D%0A%09DOC%2814.2%29%3A%3Cx%3E%3Cb%3EHard+Drive+Encryption%3A%3C%2Fb%3E+Encrypting+your+hard+drive+adds+a+simple%2C+fast%2C+and+free+way+to+reduce+your+exposure+to+data+theft+and+other+malicious+attacks+on+your+computer.%3C%2Fx%3E%0D%0A%09Q%28comp_lock_no%29%3AGOTO%3Asmartphone%0D%0A%0D%0AQ%28smartphone%29%3A+do+you+open+case%2C+litigation%2C+or+client+documents+on+your+smartphone%3F%0D%0AA%3A+Yes%0D%0A%09Q%28smartphone2%29%3A+do+you+delete+these+documents+from+you+smartphone+after+reading+them%3F%0D%0A%09A%3A+Yes%0D%0A%09%09Q%28smartphone3%29%3A+Is+your+smartphone%27s+hard+drive+encrypted%3F%0D%0A%09%09A%3A+Yes%0D%0A%09%09%09Q%28smartphone4%29%3AGOTO%3Aphone_lock%0D%0A%09%09A%28%3Cb%3ESmartphone+Encryption%3A%3C%2Fb%3E+Encrypting+your+smartphone+hard+drive+is+just+as+important+as+encrypting+your+computer+hard+drive.+Consider+doing+so+using+an+approved+application.%29%3A+No%0D%0A%09%09%09DOC%2815.1.1.2%29%3A%3Cx%3E%3Cb%3ESmartphone+Encryption%3A%3C%2Fb%3E+Encrypting+your+smartphone+hard+drive+is+just+as+important+as+encrypting+your+computer+hard+drive.+Consider+doing+so+using+an+approved+application.%3C%2Fx%3E%0D%0A%09%09%09Q%28smartphone5%29%3AGOTO%3Aphone_lock%0D%0A%09A%28%3Cb%3ESmartphone+Documents%3C%2Fb%3E%3A+If+you+open+documents+on+your+smartphone%2C+particularly+E-Mail+attachments%2C+these+documents+are+typically+downloaded+and+saved+locally.+If+the+documents+contain+sensitive+information%2C+consider+deleting+them+after+you+have+read+them.%29%3A+No%0D%0A%09%09DOC%2815.1.2%29%3A%3Cx%3E%3Cb%3ESmartphone+Documents%3C%2Fb%3E%3A+If+you+open+documents+on+your+smartphone%2C+particularly+E-Mail+attachments%2C+these+documents+are+typically+downloaded+and+saved+locally.+If+the+documents+contain+sensitive+information%2C+consider+deleting+them+after+you+have+read+them.%3C%2Fx%3E%0D%0A%09%09Q%2815.1.2%29%3AGOTO%3Aphone_lock%0D%0A%09A%3A+Not+Sure%0D%0A%09%09Q%2815.1.3%29%3AGOTO%3Aphone_lock%0D%0AA%3A+No.%0D%0A%09Q%2815.2%29%3AGOTO%3Aisp%0D%0AA%3A+I+Do+not+Own+a+Smartphone.%0D%0A%09Q%2815.3%29%3AGOTO%3Aisp%0D%0A%0D%0AQ%28phone_lock%29%3A+Is+your+smartphone+set+to+automatically+lock%3F%0D%0AA%3A+Yes%0D%0A%09Q%2816.1%29%3AGOTO%3Aisp%0D%0AA%28%3Cb%3ESmartphone+Lock%3A%3C%2Fb%3E+You+should+set+your+phone+to+lock+at+all+times.%29%3A+No%0D%0A%09DOC%2816.2%29%3A%3Cx%3E%3Cb%3ESmartphone+Lock%3A%3C%2Fb%3E+You+should+set+your+phone+to+lock+at+all+times.%3C%2Fx%3E%0D%0A%09Q%2816.2%29%3AGOTO%3Aisp%0D%0A%0D%0AQ%28isp%29%3A+How+is+your+workplace+internet+access+provided%3F%0D%0AA%3A+Through+my%2Four+office+lease+-+provided+via+the+building+lessor%2C+management+company%2C+etc.%0D%0A%09Q%2817.1%29%3A+Do+other+organizations+or+businesses+in+your+office+have+access+to+this+same+network%3F%0D%0A%09A%28%3Cb%3EOthers+Have+Network+Access%3A%3C%2Fb%3E+This+is+a+strong+risk+given+you+may+not+have+control+over+other+organization%27s+employees%2C+network+usage+habits%2C+and+who+they+may+grant+permission+of+access+to.+At+a+minimum+consider+a+Virtual+Private+Network+tool%2C+this+will+encrypt+your+network+traffic.+Ensure+any+network+drives+your+organization+uses+are+password+protected.%29%3A+Yes%0D%0A%09%09DOC%2817.1.1%29%3A%3Cx%3E%3Cb%3EOthers+Have+Network+Access%3A%3C%2Fb%3E+This+is+a+strong+risk+given+you+may+not+have+control+over+other+organization%27s+employees%2C+network+usage+habits%2C+and+who+they+may+grant+permission+of+access+to.+At+a+minimum+consider+a+Virtual+Private+Network+tool%2C+this+will+encrypt+your+network+traffic.+Ensure+any+network+drives+your+organization+uses+are+password+protected.%3C%2Fx%3E%0D%0A%09%09Q%2817.1.1%29%3AGOTO%3A17.1.2%0D%0A%09A%3A+No%0D%0A%09%09Q%2817.1.2%29%3A+Do+you+provide+the+WiFi+password+to+clients%2C+guests%2C+or+others+that+do+not+work+for+your+organization%3F%0D%0A%09%09A%28%3Cb%3EGuest+Network+Access%3A%3C%2Fb%3E+At+a+minimum+set+up+a+guest+network+if+you+are+allowing+access+to+your+network+by+users+other+than+those+that+belong+to+your+organization.%29%3A+Yes%0D%0A%09%09%09DOC%2817.1.2.1%29%3A%3Cx%3E%3Cb%3EGuest+Network+Access%3A%3C%2Fb%3E+At+a+minimum+set+up+a+guest+network+if+you+are+allowing+access+to+your+network+by+users+other+than+those+that+belong+to+your+organization.%3C%2Fx%3E%0D%0A%09%09%09Q%2817.1.2.1%29%3AGOTO%3A17.1.2.2%0D%0A%09%09A%3A+No%0D%0A%09%09%09Q%2817.1.2.2%29%3A+Is+your+WiFi+password+posted+in+writing+anywhere+in+the+office%3F%0D%0A%09%09%09A%28%3Cb%3EPosted+WiFi+Passwords%3A%3C%2Fb%3E+A+WiFi+password+your+employees+can+see+is+a+WiFi+password+guests%2C+delivery+people%2C+and+even+passers-by+can+see.+This+may+provide+easy+unwanted+access+to+your+network.+Consider+not+posting+your+WiFi+password+in+the+open.%29%3A+Yes%0D%0A%09%09%09%09DOC%2817.1.2.2.1%29%3A%3Cx%3E%3Cb%3EPosted+WiFi+Passwords%3A%3C%2Fb%3E+A+WiFi+password+your+employees+can+see+is+a+WiFi+password+guests%2C+delivery+people%2C+and+even+passers-by+can+see.+This+may+provide+easy+unwanted+access+to+your+network.+Consider+not+posting+your+WiFi+password+in+the+open.%3C%2Fx%3E%0D%0A%09%09%09%09Q%2817.1.2.2.1%29%3AGOTO%3Aend%0D%0A%09%09%09A%3A+No%0D%0A%09%09%09%09Q%2817.1.2.2.2%29%3AGOTO%3Aend%0D%0AA%3A+Through+a+commercial+or+business+internet+service+provider.%0D%0A%09Q%2817.2%29%3AGOTO%3Aend%0D%0AA%3A+Other%0D%0A%09Q%2817.3%29%3AGOTO%3Aend%0D%0A%0D%0AQ%28end%29%3A+Thank+you+for+your+time.+Please+click+%22Complete%22+to+see+suggested+changes+and+potential+risks+based+on+your+answers.%0D%0AA%5Bjavascript%3Asubmit2%28%27https%3A%2F%2Fwww.qnamarkup.org%2Fdoc%2Fparse%2Fhtml%2F%27%2C%27POST%27%2C%27t%27%2C%27You+may+download+or+print+the+suggestions+here.%27%29%5D%3A+Complete%0D%0A%09Q%2818.1%29%3A+Thank+you.%0D%0A+++++word+wrap+++%7C+++report+bug%2FissueOutput+</div><div id="ondeck" name="ondeck"><div id='Q-1' name='Q-1' style='display:none;'> Do <b>NOT</b> rely on this interview or treat this interview as legal advice! This interview is a class project and is likely incomplete.
+<p>This is a <a href="http://www.codingthelaw.org/">Coding the Law</a> class project for Suffolk University Law School, Fall 2018</p>
+
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-2' name='Q-2' style='display:none;'> Do you make use of a <b>case management</b> software?
+</div><div id='D-2.1' name='D-2.1' style='display:none;'> <x>Case management software may resolve some of the issues in this questionnaire.</x>
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'>GOTO:3</div><div id='D-2.2' name='D-2.2' style='display:none;'> <x><b> Case Management Software:</b> Consider a case management software, as it will solve many of these issues simultaneously.</x>
+</div><div id='Q-2.2' name='Q-2.2' style='display:none;'>GOTO:4</div><div id='Q-3' name='Q-3' style='display:none;'> If you make use of Case Management software, some of these questions may not apply. Additionally, your current software may provide embedded solutions to many suggestions provided by this interview. It is recommended you review the features available to you through your software license.
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4</div><div id='Q-4' name='Q-4' style='display:none;'> Do you store client documents on a work or personal computer? (Locally on the computer's hard drive?)
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'> Is this the only place that you store them?
+</div><div id='D-4.1.1' name='D-4.1.1' style='display:none;'><x><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</x>
+</div><div id='Q-4.1.1' name='Q-4.1.1' style='display:none;'>GOTO:12</div><div id='D-4.1.2' name='D-4.1.2' style='display:none;'><x><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</x>
+</div><div id='Q-4.1.2' name='Q-4.1.2' style='display:none;'>GOTO:5</div><div id='Q-4.2' name='Q-4.2' style='display:none;'>GOTO:5</div><div id='Q-5' name='Q-5' style='display:none;'> Where do you store these documents?
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'> Do others have access to this drive?
+</div><div id='D-5.1.1' name='D-5.1.1' style='display:none;'><x><b>Cloud Storage & User Access:</b> Cloud drive services provide users with tools to track access, including who has access to specific documents, folders, and access to the entire drive. Track this information and ensure access is restricted only to those who need it.</x>
+</div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'>GOTO:7</div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'>GOTO:7</div><div id='Q-5.2' name='Q-5.2' style='display:none;'> Do others have access to this local drive?
+</div><div id='D-5.2.1' name='D-5.2.1' style='display:none;'><x>Carefully track who has access to networked drives. Consider making use of tools that assign user credentials, limit access, track access, and provide reports. Consider keeping sensitive documents on a separate drive.</x>
+</div><div id='Q-5.2.1' name='Q-5.2.1' style='display:none;'>GOTO:6</div><div id='Q-5.2.2' name='Q-5.2.2' style='display:none;'>GOTO:7</div><div id='Q-5.3' name='Q-5.3' style='display:none;'>GOTO:7</div><div id='Q-6' name='Q-6' style='display:none;'> Is the drive password protected?
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7</div><div id='D-6.2' name='D-6.2' style='display:none;'> <x>Files on a network drive is vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect the drive makes it more difficult for adverse parties, viruses, and other risks to access your information.</x>
+</div><div id='Q-6.2' name='Q-6.2' style='display:none;'> Are documents or folders in the drive password protected?
+</div><div id='Q-6.2.1' name='Q-6.2.1' style='display:none;'>GOTO:7</div><div id='D-6.2.2' name='D-6.2.2' style='display:none;'> <x><b>File & Document Passwords:</b> Files and documents on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect important documents makes it more difficult for adverse parties, viruses, and other risks to access your information, however, adding a password to the drive itself is also helpful, and requires fewer passwords.</x>
+</div><div id='Q-6.2.2' name='Q-6.2.2' style='display:none;'>GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'> Do you send sensitive client documents or information over email?
+<p> This includes information you have entered into the body of the E-Mail or information found within attached documents.</p>
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:8</div><div id='Q-7.2' name='Q-7.2' style='display:none;'> How do you send documents to clients?
+</div><div id='D-7.2.1' name='D-7.2.1' style='display:none;'><x><b>Cloud Document Sharing:</b> When sharing documents with others over cloud services, make sure to verify permissions used. If you do not want a recipient to have permanent access to a document, or the ability to alter the document or view changes you might make to the same document, verify that you can set access permissions to expire.</X> 
+</div><div id='Q-7.2.1' name='Q-7.2.1' style='display:none;'> Do you use this cloud service to secure signatures for documents that require signing?
+</div><div id='Q-7.2.1.1' name='Q-7.2.1.1' style='display:none;'>GOTO:11</div><div id='Q-7.2.1.2' name='Q-7.2.1.2' style='display:none;'>GOTO:10</div><div id='Q-7.2.2' name='Q-7.2.2' style='display:none;'> Do you use this file sharing service to secure signatures?
+</div><div id='Q-7.2.2.1' name='Q-7.2.2.1' style='display:none;'>GOTO:11</div><div id='Q-7.2.2.2' name='Q-7.2.2.2' style='display:none;'>GOTO:10</div><div id='Q-7.2.3' name='Q-7.2.3' style='display:none;'>GOTO:10</div><div id='Q-8' name='Q-8' style='display:none;'> Do clients do the same?
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>GOTO:9</div><div id='Q-9' name='Q-9' style='display:none;'>Do you use a paid E-mail service, or a free E-mail service?
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'>GOTO:10</div><div id='D-9.2' name='D-9.2' style='display:none;'><x><b>Free E-Mail Service:</b> Free E-Mail providers generally do not have rigorous privacy and data security standards. It is important you research your provider's privacy and security practices and consider making use of a paid E-Mail service.</x>
+</div><div id='Q-9.2' name='Q-9.2' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'>How do you have clients (or any other parties) sign documents?
+</div><div id='D-10.1' name='D-10.1' style='display:none;'><x><b>Document Signatures:</b> Consider an E-Signature tool. This allows you to acquire signatures whenever you need them, so long as the signing party has access to a computer, tablet, or smartphone.</x>
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'>GOTO:11</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>GOTO:11</div><div id='Q-11' name='Q-11' style='display:none;'> If you need to collaboratively work on a document, such as interrogatories, contracts, motions, etc, with clients or colleagues, do you make use of a screen sharing tool?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='D-11.2' name='D-11.2' style='display:none;'><x><b>Document Collaboration:</b> Try a screen sharing tool! These tools allow you to work on documents in real time with others, with no need to exchange multiple copies.</x>
+</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Is your computer password protected?
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:14</div><div id='D-12.2' name='D-12.2' style='display:none;'><x><b>Computer Password Protection:</b> It is essential that you lock and password protect any computer, personal or business! Make sure to password protect your computer and set it to automatically lock after a period of idleness.</x>
+</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> Are the documents stored on your computer password protected, and/or are the folders the documents are kept in password protected or encrypted, or both?
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'>GOTO:14</div><div id='Q-13.2' name='Q-13.2' style='display:none;'>GOTO:14</div><div id='Q-14' name='Q-14' style='display:none;'> is your computer hard drive encrypted?
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'>GOTO:15</div><div id='D-14.2' name='D-14.2' style='display:none;'><x><b>Hard Drive Encryption:</b> Encrypting your hard drive adds a simple, fast, and free way to reduce your exposure to data theft and other malicious attacks on your computer.</x>
+</div><div id='Q-14.2' name='Q-14.2' style='display:none;'>GOTO:15</div><div id='Q-15' name='Q-15' style='display:none;'> do you open case, litigation, or client documents on your smartphone?
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'> do you delete these documents from you smartphone after reading them?
+</div><div id='Q-15.1.1' name='Q-15.1.1' style='display:none;'> Is your smartphone's hard drive encrypted?
+</div><div id='Q-15.1.1.1' name='Q-15.1.1.1' style='display:none;'>GOTO:16</div><div id='D-15.1.1.2' name='D-15.1.1.2' style='display:none;'><x><b>Smartphone Encryption:</b> Encrypting your smartphone hard drive is just as important as encrypting your computer hard drive. Consider doing so using an approved application.</x>
+</div><div id='Q-15.1.1.2' name='Q-15.1.1.2' style='display:none;'>GOTO:16</div><div id='D-15.1.2' name='D-15.1.2' style='display:none;'><x><b>Smartphone Documents</b>: If you open documents on your smartphone, particularly E-Mail attachments, these documents are typically downloaded and saved locally. If the documents contain sensitive information, consider deleting them after you have read them.</x>
+</div><div id='Q-15.1.2' name='Q-15.1.2' style='display:none;'>GOTO:16</div><div id='Q-15.1.3' name='Q-15.1.3' style='display:none;'>GOTO:16</div><div id='Q-15.2' name='Q-15.2' style='display:none;'>GOTO:17</div><div id='Q-15.3' name='Q-15.3' style='display:none;'>GOTO:17</div><div id='Q-16' name='Q-16' style='display:none;'> Is your smartphone set to automatically lock?
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'>GOTO:17</div><div id='D-16.2' name='D-16.2' style='display:none;'><x><b>Smartphone Lock:</b> You should set your phone to lock at all times.</x>
+</div><div id='Q-16.2' name='Q-16.2' style='display:none;'>GOTO:17</div><div id='Q-17' name='Q-17' style='display:none;'> How is your workplace internet access provided?
+</div><div id='Q-17.1' name='Q-17.1' style='display:none;'> Do other organizations or businesses in your office have access to this same network?
+</div><div id='D-17.1.1' name='D-17.1.1' style='display:none;'><x><b>Others Have Network Access:</b> This is a strong risk given you may not have control over other organization's employees, network usage habits, and who they may grant permission of access to. At a minimum consider a Virtual Private Network tool, this will encrypt your network traffic. Ensure any network drives your organization uses are password protected.</x>
+</div><div id='Q-17.1.1' name='Q-17.1.1' style='display:none;'>GOTO:17.1.2</div><div id='Q-17.1.2' name='Q-17.1.2' style='display:none;'> Do you provide the WiFi password to clients, guests, or others that do not work for your organization?
+</div><div id='D-17.1.2.1' name='D-17.1.2.1' style='display:none;'><x><b>Guest Network Access:</b> At a minimum set up a guest network if you are allowing access to your network by users other than those that belong to your organization.</x>
+</div><div id='Q-17.1.2.1' name='Q-17.1.2.1' style='display:none;'>GOTO:17.1.2.2</div><div id='Q-17.1.2.2' name='Q-17.1.2.2' style='display:none;'> Is your WiFi password posted in writing anywhere in the office?
+</div><div id='D-17.1.2.2.1' name='D-17.1.2.2.1' style='display:none;'><x><b>Posted WiFi Passwords:</b> A WiFi password your employees can see is a WiFi password guests, delivery people, and even passers-by can see. This may provide easy unwanted access to your network. Consider not posting your WiFi password in the open.</x>
+</div><div id='Q-17.1.2.2.1' name='Q-17.1.2.2.1' style='display:none;'>GOTO:18</div><div id='Q-17.1.2.2.2' name='Q-17.1.2.2.2' style='display:none;'>GOTO:18</div><div id='Q-17.2' name='Q-17.2' style='display:none;'>GOTO:18</div><div id='Q-17.3' name='Q-17.3' style='display:none;'>GOTO:18</div><div id='Q-18' name='Q-18' style='display:none;'> Thank you for your time. Please click "Complete" to see suggested changes and potential risks based on your answers.
+</div><div id='Q-18.1' name='Q-18.1' style='display:none;'> Thank you.
+     word wrap   |   report bug/issueOutput </div><div id='A-1.1' name='A-1.1' style='display:none;'> By clicking here, I am confirming that I understand:
+	<ol type="1">
+ <li>This Q&A is a <b>class project.</b></li>
+ <li>These questions and results <b>do not</b> constitute legal advice.</li>
+ <li>I <b>should not rely</b> on the information provided in this Q&A.</li>
+ </ol>
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>By clicking here, I am confirming that I understand:
+	<ol type="1">
+ <li>This Q&A is a <b>class project.</b></li>
+ <li>These questions and results <b>do not</b> constitute legal advice.</li>
+ <li>I <b>should not rely</b> on the information provided in this Q&A.</li>
+ </ol></div><div id='A-2.1' name='A-2.1' style='display:none;'> Yes
+</div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'></div><div id='X-2.1' name='X-2.1' style='display:none;'><b>Case Management Software:</b> Case management software may resolve some of the issues in this questionnaire.</div><div id='A-2.2' name='A-2.2' style='display:none;'> No
+</div><div id='A-href-2.2' name='A-href-2.2' style='display:none;'>javascript:void('');</div><div id='A-target-2.2' name='A-target-2.2' style='display:none;'></div><div id='X-2.2' name='X-2.2' style='display:none;'><b> Case Management Software:</b> Consider a case management software, as it will solve many of these issues simultaneously.</div><div id='A-3.1' name='A-3.1' style='display:none;'> I understand.
+</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>I understand.</div><div id='A-4.1' name='A-4.1' style='display:none;'> Yes
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>Yes</div><div id='A-4.1.1' name='A-4.1.1' style='display:none;'> Yes
+</div><div id='A-href-4.1.1' name='A-href-4.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1' name='A-target-4.1.1' style='display:none;'></div><div id='X-4.1.1' name='X-4.1.1' style='display:none;'><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</div><div id='A-4.1.2' name='A-4.1.2' style='display:none;'> No
+</div><div id='A-href-4.1.2' name='A-href-4.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2' name='A-target-4.1.2' style='display:none;'></div><div id='X-4.1.2' name='X-4.1.2' style='display:none;'>No</div><div id='A-4.2' name='A-4.2' style='display:none;'> No
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>No</div><div id='A-5.1' name='A-5.1' style='display:none;'> Cloud Storage Service
+</div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>Cloud Storage Service</div><div id='A-5.1.1' name='A-5.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1' name='A-href-5.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1' name='A-target-5.1.1' style='display:none;'></div><div id='X-5.1.1' name='X-5.1.1' style='display:none;'><b>Cloud Storage & User Access:</b> Cloud drive services provide users with tools to track access, including who has access to specific documents, folders, and access to the entire drive. Track this information and ensure access is restricted only to those who need it.</div><div id='A-5.1.2' name='A-5.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'>No</div><div id='A-5.2' name='A-5.2' style='display:none;'> Local Network Drive
+</div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'></div><div id='X-5.2' name='X-5.2' style='display:none;'>Local Network Drive</div><div id='A-5.2.1' name='A-5.2.1' style='display:none;'> Yes
+</div><div id='A-href-5.2.1' name='A-href-5.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.2.1' name='A-target-5.2.1' style='display:none;'></div><div id='X-5.2.1' name='X-5.2.1' style='display:none;'><b>Local Network Drive Users:</b> Carefully track who has access to networked drives. Consider making use of tools that assign user credentials, limit access, track access, and provide reports. Consider keeping sensitive documents on a separate drive.</div><div id='A-5.2.2' name='A-5.2.2' style='display:none;'> No
+</div><div id='A-href-5.2.2' name='A-href-5.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2.2' name='A-target-5.2.2' style='display:none;'></div><div id='X-5.2.2' name='X-5.2.2' style='display:none;'>No</div><div id='A-5.3' name='A-5.3' style='display:none;'> Both
+</div><div id='A-href-5.3' name='A-href-5.3' style='display:none;'>javascript:void('');</div><div id='A-target-5.3' name='A-target-5.3' style='display:none;'></div><div id='X-5.3' name='X-5.3' style='display:none;'>Both</div><div id='A-6.1' name='A-6.1' style='display:none;'> Yes
+</div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>Yes</div><div id='A-6.2' name='A-6.2' style='display:none;'> No
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'>Files on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect the drive makes it more difficult for adverse parties, viruses, and other risks to access your information.</div><div id='A-6.2.1' name='A-6.2.1' style='display:none;'> Yes
+</div><div id='A-href-6.2.1' name='A-href-6.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.2.1' name='A-target-6.2.1' style='display:none;'></div><div id='X-6.2.1' name='X-6.2.1' style='display:none;'>Yes</div><div id='A-6.2.2' name='A-6.2.2' style='display:none;'> No
+</div><div id='A-href-6.2.2' name='A-href-6.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2.2' name='A-target-6.2.2' style='display:none;'></div><div id='X-6.2.2' name='X-6.2.2' style='display:none;'><b>File & Document Passwords:</b> Files and documents on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect important documents makes it more difficult for adverse parties, viruses, and other risks to access your information, however, adding a password to the drive itself is also helpful, and requires fewer passwords.</div><div id='A-7.1' name='A-7.1' style='display:none;'> Yes
+</div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>Yes</div><div id='A-7.2' name='A-7.2' style='display:none;'> No - <b>NEVER.</b>
+</div><div id='A-href-7.2' name='A-href-7.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2' name='A-target-7.2' style='display:none;'></div><div id='X-7.2' name='X-7.2' style='display:none;'>No - <b>NEVER.</b></div><div id='A-7.2.1' name='A-7.2.1' style='display:none;'> Cloud Sharing Service
+</div><div id='A-href-7.2.1' name='A-href-7.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.1' name='A-target-7.2.1' style='display:none;'></div><div id='X-7.2.1' name='X-7.2.1' style='display:none;'><b>Cloud Document Sharing:</b> When sharing documents with others over cloud services, make sure to verify permissions used. If you do not want a recipient to have permanent access to a document, or the ability to alter the document or view changes you might make to the same document, verify that you can set access permissions to expire.</div><div id='A-7.2.1.1' name='A-7.2.1.1' style='display:none;'> Yes
+</div><div id='A-href-7.2.1.1' name='A-href-7.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.1.1' name='A-target-7.2.1.1' style='display:none;'></div><div id='X-7.2.1.1' name='X-7.2.1.1' style='display:none;'>Yes</div><div id='A-7.2.1.2' name='A-7.2.1.2' style='display:none;'> No
+</div><div id='A-href-7.2.1.2' name='A-href-7.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.1.2' name='A-target-7.2.1.2' style='display:none;'></div><div id='X-7.2.1.2' name='X-7.2.1.2' style='display:none;'>No</div><div id='A-7.2.2' name='A-7.2.2' style='display:none;'> Secure File Sharing Service
+</div><div id='A-href-7.2.2' name='A-href-7.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.2' name='A-target-7.2.2' style='display:none;'></div><div id='X-7.2.2' name='X-7.2.2' style='display:none;'>Secure File Sharing Service</div><div id='A-7.2.2.1' name='A-7.2.2.1' style='display:none;'> Yes
+</div><div id='A-href-7.2.2.1' name='A-href-7.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.2.1' name='A-target-7.2.2.1' style='display:none;'></div><div id='X-7.2.2.1' name='X-7.2.2.1' style='display:none;'>Yes</div><div id='A-7.2.2.2' name='A-7.2.2.2' style='display:none;'> No
+</div><div id='A-href-7.2.2.2' name='A-href-7.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.2.2' name='A-target-7.2.2.2' style='display:none;'></div><div id='X-7.2.2.2' name='X-7.2.2.2' style='display:none;'>No</div><div id='A-7.2.3' name='A-7.2.3' style='display:none;'> None of the Above.
+</div><div id='A-href-7.2.3' name='A-href-7.2.3' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.3' name='A-target-7.2.3' style='display:none;'></div><div id='X-7.2.3' name='X-7.2.3' style='display:none;'>None of the Above.</div><div id='A-8.1' name='A-8.1' style='display:none;'> Yes
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Yes</div><div id='A-8.2' name='A-8.2' style='display:none;'> No
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>No</div><div id='A-9.1' name='A-9.1' style='display:none;'> Paid
+</div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>Paid</div><div id='A-9.2' name='A-9.2' style='display:none;'> Free
+</div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'><b>Free E-Mail Service:</b> Free E-Mail providers generally do not have rigorous privacy and data security standards. It is important you research your provider's privacy and security practices and consider making use of a paid E-Mail service.</div><div id='A-10.1' name='A-10.1' style='display:none;'> Using mail, E-Mail, Fax, or in-person meetings with the person who must sign.
+</div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'><b>Document Signatures:</b> Consider an E-Signature tool. This allows you to acquire signatures whenever you need them, so long as the signing party has access to a computer, tablet, or smartphone.</div><div id='A-10.2' name='A-10.2' style='display:none;'> An electronic signature software.
+</div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'>An electronic signature software.</div><div id='A-11.1' name='A-11.1' style='display:none;'> Yes
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Yes</div><div id='A-11.2' name='A-11.2' style='display:none;'> No
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'><b>Document Collaboration:</b> Try a screen sharing tool! These tools allow you to work on documents in real time with others, with no need to exchange multiple copies.</div><div id='A-12.1' name='A-12.1' style='display:none;'> Yes
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>Yes</div><div id='A-12.2' name='A-12.2' style='display:none;'> No
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'><b>Computer Password Protection:</b> It is essential that you lock and password protect any computer, personal or business! Make sure to password protect your computer and set it to automatically lock after a period of idleness.</div><div id='A-13.1' name='A-13.1' style='display:none;'> Yes
+</div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'></div><div id='X-13.1' name='X-13.1' style='display:none;'>Yes</div><div id='A-13.2' name='A-13.2' style='display:none;'> No
+</div><div id='A-href-13.2' name='A-href-13.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.2' name='A-target-13.2' style='display:none;'></div><div id='X-13.2' name='X-13.2' style='display:none;'>No</div><div id='A-14.1' name='A-14.1' style='display:none;'> Yes
+</div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>Yes</div><div id='A-14.2' name='A-14.2' style='display:none;'> No/Not Sure
+</div><div id='A-href-14.2' name='A-href-14.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.2' name='A-target-14.2' style='display:none;'></div><div id='X-14.2' name='X-14.2' style='display:none;'><b>Hard Drive Encryption:</b> Encrypting your hard drive adds a simple, fast, and free way to reduce your exposure to data theft and other malicious attacks on your computer.</div><div id='A-15.1' name='A-15.1' style='display:none;'> Yes
+</div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>Yes</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'> Yes
+</div><div id='A-href-15.1.1' name='A-href-15.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1' name='A-target-15.1.1' style='display:none;'></div><div id='X-15.1.1' name='X-15.1.1' style='display:none;'>Yes</div><div id='A-15.1.1.1' name='A-15.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-15.1.1.1' name='A-href-15.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1.1' name='A-target-15.1.1.1' style='display:none;'></div><div id='X-15.1.1.1' name='X-15.1.1.1' style='display:none;'>Yes</div><div id='A-15.1.1.2' name='A-15.1.1.2' style='display:none;'> No
+</div><div id='A-href-15.1.1.2' name='A-href-15.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1.2' name='A-target-15.1.1.2' style='display:none;'></div><div id='X-15.1.1.2' name='X-15.1.1.2' style='display:none;'><b>Smartphone Encryption:</b> Encrypting your smartphone hard drive is just as important as encrypting your computer hard drive. Consider doing so using an approved application.</div><div id='A-15.1.2' name='A-15.1.2' style='display:none;'> No
+</div><div id='A-href-15.1.2' name='A-href-15.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.2' name='A-target-15.1.2' style='display:none;'></div><div id='X-15.1.2' name='X-15.1.2' style='display:none;'><b>Smartphone Documents</b>: If you open documents on your smartphone, particularly E-Mail attachments, these documents are typically downloaded and saved locally. If the documents contain sensitive information, consider deleting them after you have read them.</div><div id='A-15.1.3' name='A-15.1.3' style='display:none;'> Not Sure
+</div><div id='A-href-15.1.3' name='A-href-15.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.3' name='A-target-15.1.3' style='display:none;'></div><div id='X-15.1.3' name='X-15.1.3' style='display:none;'>Not Sure</div><div id='A-15.2' name='A-15.2' style='display:none;'> No.
+</div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'>No.</div><div id='A-15.3' name='A-15.3' style='display:none;'> I Do not Own a Smartphone.
+</div><div id='A-href-15.3' name='A-href-15.3' style='display:none;'>javascript:void('');</div><div id='A-target-15.3' name='A-target-15.3' style='display:none;'></div><div id='X-15.3' name='X-15.3' style='display:none;'>I Do not Own a Smartphone.</div><div id='A-16.1' name='A-16.1' style='display:none;'> Yes
+</div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>Yes</div><div id='A-16.2' name='A-16.2' style='display:none;'> No
+</div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'><b>Smartphone Lock:</b> You should set your phone to lock at all times.</div><div id='A-17.1' name='A-17.1' style='display:none;'> Through my/our office lease - provided via the building lessor, management company, etc.
+</div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>Through my/our office lease - provided via the building lessor, management company, etc.</div><div id='A-17.1.1' name='A-17.1.1' style='display:none;'> Yes
+</div><div id='A-href-17.1.1' name='A-href-17.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.1' name='A-target-17.1.1' style='display:none;'></div><div id='X-17.1.1' name='X-17.1.1' style='display:none;'><b>Others Have Network Access:</b> This is a strong risk given you may not have control over other organization's employees, network usage habits, and who they may grant permission of access to. At a minimum consider a Virtual Private Network tool, this will encrypt your network traffic. Ensure any network drives your organization uses are password protected.</div><div id='A-17.1.2' name='A-17.1.2' style='display:none;'> No
+</div><div id='A-href-17.1.2' name='A-href-17.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2' name='A-target-17.1.2' style='display:none;'></div><div id='X-17.1.2' name='X-17.1.2' style='display:none;'>No</div><div id='A-17.1.2.1' name='A-17.1.2.1' style='display:none;'> Yes
+</div><div id='A-href-17.1.2.1' name='A-href-17.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.1' name='A-target-17.1.2.1' style='display:none;'></div><div id='X-17.1.2.1' name='X-17.1.2.1' style='display:none;'><b>Guest Network Access:</b> At a minimum set up a guest network if you are allowing access to your network by users other than those that belong to your organization.</div><div id='A-17.1.2.2' name='A-17.1.2.2' style='display:none;'> No
+</div><div id='A-href-17.1.2.2' name='A-href-17.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.2' name='A-target-17.1.2.2' style='display:none;'></div><div id='X-17.1.2.2' name='X-17.1.2.2' style='display:none;'>No</div><div id='A-17.1.2.2.1' name='A-17.1.2.2.1' style='display:none;'> Yes
+</div><div id='A-href-17.1.2.2.1' name='A-href-17.1.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.2.1' name='A-target-17.1.2.2.1' style='display:none;'></div><div id='X-17.1.2.2.1' name='X-17.1.2.2.1' style='display:none;'><b>Posted WiFi Passwords:</b> A WiFi password your employees can see is a WiFi password guests, delivery people, and even passers-by can see. This may provide easy unwanted access to your network. Consider not posting your WiFi password in the open.</div><div id='A-17.1.2.2.2' name='A-17.1.2.2.2' style='display:none;'> No
+</div><div id='A-href-17.1.2.2.2' name='A-href-17.1.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.2.2' name='A-target-17.1.2.2.2' style='display:none;'></div><div id='X-17.1.2.2.2' name='X-17.1.2.2.2' style='display:none;'>No</div><div id='A-17.2' name='A-17.2' style='display:none;'> Through a commercial or business internet service provider.
+</div><div id='A-href-17.2' name='A-href-17.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.2' name='A-target-17.2' style='display:none;'></div><div id='X-17.2' name='X-17.2' style='display:none;'>Through a commercial or business internet service provider.</div><div id='A-17.3' name='A-17.3' style='display:none;'> Other
+</div><div id='A-href-17.3' name='A-href-17.3' style='display:none;'>javascript:void('');</div><div id='A-target-17.3' name='A-target-17.3' style='display:none;'></div><div id='X-17.3' name='X-17.3' style='display:none;'>Other</div><div id='A-18.1' name='A-18.1' style='display:none;'> Complete
+</div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:submit2('https://www.qnamarkup.org/doc/parse/html/','POST','t','You may download or print the suggestions here.')</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'>Complete</div>
+<script>
+	var QVnames = [['1','intro'],['1.1','1.1'],['2','case_management'],['2.1','case_mgmt_yes'],['2.2','case_management_2'],['3','case_mgmt_warning'],['3.1','3.1'],['4','work_personal_computer'],['4.1','work_personal_computer_yes'],['4.1.1','work_personal_computer_yes_2'],['4.1.2','4.1.2'],['4.2','work_personal_computer_no'],['5','store_docs'],['5.1','cloud_access'],['5.1.1','cloud_access_2'],['5.1.2','cloud_access_3'],['5.2','local_drive_access'],['5.2.1','local_drive_access_2'],['5.2.2','local_drive_access_3'],['5.3','5.3'],['6','drive_pword'],['6.1','drive_pword_yes'],['6.2','docs_pword'],['6.2.1','docs_pword_yes'],['6.2.2','docs_pword_no'],['7','client_docs_email'],['7.1','client_docs_email_yes'],['7.2','how_send_if_not_email'],['7.2.1','7.2.1'],['7.2.1.1','7.2.1.1'],['7.2.1.2','7.2.1.2'],['7.2.2','7.2.2'],['7.2.2.1','7.2.2.1'],['7.2.2.2','7.2.2.2'],['7.2.3','7.2.3'],['8','client_same'],['8.1','8.1'],['8.2','8.2'],['9','paid_or_free'],['9.1','9.1'],['9.2','9.2'],['10','client_sign'],['10.1','10.1'],['10.2','10.2'],['11','client_collab'],['11.1','11.1'],['11.2','11.2'],['12','computer_pword'],['12.1','computer_pword_yes'],['12.2','computer_pword_no'],['13','local_docs_pword'],['13.1','local_docs_pword_yes'],['13.2','local_docs_pword_no'],['14','comp_lock'],['14.1','comp_lock_yes'],['14.2','comp_lock_no'],['15','smartphone'],['15.1','smartphone2'],['15.1.1','smartphone3'],['15.1.1.1','smartphone4'],['15.1.1.2','smartphone5'],['15.1.2','15.1.2'],['15.1.3','15.1.3'],['15.2','15.2'],['15.3','15.3'],['16','phone_lock'],['16.1','16.1'],['16.2','16.2'],['17','isp'],['17.1','17.1'],['17.1.1','17.1.1'],['17.1.2','17.1.2'],['17.1.2.1','17.1.2.1'],['17.1.2.2','17.1.2.2'],['17.1.2.2.1','17.1.2.2.1'],['17.1.2.2.2','17.1.2.2.2'],['17.2','17.2'],['17.3','17.3'],['18','end'],['18.1','18.1']];
+</script>
+</div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id='Q-1' name='Q-1' style='display:none;'> Do <b>NOT</b> rely on this interview or treat this interview as legal advice! This interview is a class project and is likely incomplete.
+<p>This is a <a href="http://www.codingthelaw.org/">Coding the Law</a> class project for Suffolk University Law School, Fall 2018</p>
+
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-2' name='Q-2' style='display:none;'> Do you make use of a <b>case management</b> software?
+</div><div id='D-2.1' name='D-2.1' style='display:none;'> <x>Case management software may resolve some of the issues in this questionnaire.</x>
+</div><div id='Q-2.1' name='Q-2.1' style='display:none;'>GOTO:3</div><div id='D-2.2' name='D-2.2' style='display:none;'> <x><b> Case Management Software:</b> Consider a case management software, as it will solve many of these issues simultaneously.</x>
+</div><div id='Q-2.2' name='Q-2.2' style='display:none;'>GOTO:4</div><div id='Q-3' name='Q-3' style='display:none;'> If you make use of Case Management software, some of these questions may not apply. Additionally, your current software may provide embedded solutions to many suggestions provided by this interview. It is recommended you review the features available to you through your software license.
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4</div><div id='Q-4' name='Q-4' style='display:none;'> Do you store client documents on a work or personal computer? (Locally on the computer's hard drive?)
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'> Is this the only place that you store them?
+</div><div id='D-4.1.1' name='D-4.1.1' style='display:none;'><x><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</x>
+</div><div id='Q-4.1.1' name='Q-4.1.1' style='display:none;'>GOTO:12</div><div id='D-4.1.2' name='D-4.1.2' style='display:none;'><x><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</x>
+</div><div id='Q-4.1.2' name='Q-4.1.2' style='display:none;'>GOTO:5</div><div id='Q-4.2' name='Q-4.2' style='display:none;'>GOTO:5</div><div id='Q-5' name='Q-5' style='display:none;'> Where do you store these documents?
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'> Do others have access to this drive?
+</div><div id='D-5.1.1' name='D-5.1.1' style='display:none;'><x><b>Cloud Storage & User Access:</b> Cloud drive services provide users with tools to track access, including who has access to specific documents, folders, and access to the entire drive. Track this information and ensure access is restricted only to those who need it.</x>
+</div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'>GOTO:7</div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'>GOTO:7</div><div id='Q-5.2' name='Q-5.2' style='display:none;'> Do others have access to this local drive?
+</div><div id='D-5.2.1' name='D-5.2.1' style='display:none;'><x>Carefully track who has access to networked drives. Consider making use of tools that assign user credentials, limit access, track access, and provide reports. Consider keeping sensitive documents on a separate drive.</x>
+</div><div id='Q-5.2.1' name='Q-5.2.1' style='display:none;'>GOTO:6</div><div id='Q-5.2.2' name='Q-5.2.2' style='display:none;'>GOTO:7</div><div id='Q-5.3' name='Q-5.3' style='display:none;'>GOTO:7</div><div id='Q-6' name='Q-6' style='display:none;'> Is the drive password protected?
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7</div><div id='D-6.2' name='D-6.2' style='display:none;'> <x>Files on a network drive is vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect the drive makes it more difficult for adverse parties, viruses, and other risks to access your information.</x>
+</div><div id='Q-6.2' name='Q-6.2' style='display:none;'> Are documents or folders in the drive password protected?
+</div><div id='Q-6.2.1' name='Q-6.2.1' style='display:none;'>GOTO:7</div><div id='D-6.2.2' name='D-6.2.2' style='display:none;'> <x><b>File & Document Passwords:</b> Files and documents on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect important documents makes it more difficult for adverse parties, viruses, and other risks to access your information, however, adding a password to the drive itself is also helpful, and requires fewer passwords.</x>
+</div><div id='Q-6.2.2' name='Q-6.2.2' style='display:none;'>GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'> Do you send sensitive client documents or information over email?
+<p> This includes information you have entered into the body of the E-Mail or information found within attached documents.</p>
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:8</div><div id='Q-7.2' name='Q-7.2' style='display:none;'> How do you send documents to clients?
+</div><div id='D-7.2.1' name='D-7.2.1' style='display:none;'><x><b>Cloud Document Sharing:</b> When sharing documents with others over cloud services, make sure to verify permissions used. If you do not want a recipient to have permanent access to a document, or the ability to alter the document or view changes you might make to the same document, verify that you can set access permissions to expire.</X> 
+</div><div id='Q-7.2.1' name='Q-7.2.1' style='display:none;'> Do you use this cloud service to secure signatures for documents that require signing?
+</div><div id='Q-7.2.1.1' name='Q-7.2.1.1' style='display:none;'>GOTO:11</div><div id='Q-7.2.1.2' name='Q-7.2.1.2' style='display:none;'>GOTO:10</div><div id='Q-7.2.2' name='Q-7.2.2' style='display:none;'> Do you use this file sharing service to secure signatures?
+</div><div id='Q-7.2.2.1' name='Q-7.2.2.1' style='display:none;'>GOTO:11</div><div id='Q-7.2.2.2' name='Q-7.2.2.2' style='display:none;'>GOTO:10</div><div id='Q-7.2.3' name='Q-7.2.3' style='display:none;'>GOTO:10</div><div id='Q-8' name='Q-8' style='display:none;'> Do clients do the same?
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>GOTO:9</div><div id='Q-9' name='Q-9' style='display:none;'>Do you use a paid E-mail service, or a free E-mail service?
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'>GOTO:10</div><div id='D-9.2' name='D-9.2' style='display:none;'><x><b>Free E-Mail Service:</b> Free E-Mail providers generally do not have rigorous privacy and data security standards. It is important you research your provider's privacy and security practices and consider making use of a paid E-Mail service.</x>
+</div><div id='Q-9.2' name='Q-9.2' style='display:none;'>GOTO:10</div><div id='Q-10' name='Q-10' style='display:none;'>How do you have clients (or any other parties) sign documents?
+</div><div id='D-10.1' name='D-10.1' style='display:none;'><x><b>Document Signatures:</b> Consider an E-Signature tool. This allows you to acquire signatures whenever you need them, so long as the signing party has access to a computer, tablet, or smartphone.</x>
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'>GOTO:11</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>GOTO:11</div><div id='Q-11' name='Q-11' style='display:none;'> If you need to collaboratively work on a document, such as interrogatories, contracts, motions, etc, with clients or colleagues, do you make use of a screen sharing tool?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'>GOTO:12</div><div id='D-11.2' name='D-11.2' style='display:none;'><x><b>Document Collaboration:</b> Try a screen sharing tool! These tools allow you to work on documents in real time with others, with no need to exchange multiple copies.</x>
+</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Is your computer password protected?
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:14</div><div id='D-12.2' name='D-12.2' style='display:none;'><x><b>Computer Password Protection:</b> It is essential that you lock and password protect any computer, personal or business! Make sure to password protect your computer and set it to automatically lock after a period of idleness.</x>
+</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> Are the documents stored on your computer password protected, and/or are the folders the documents are kept in password protected or encrypted, or both?
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'>GOTO:14</div><div id='Q-13.2' name='Q-13.2' style='display:none;'>GOTO:14</div><div id='Q-14' name='Q-14' style='display:none;'> is your computer hard drive encrypted?
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'>GOTO:15</div><div id='D-14.2' name='D-14.2' style='display:none;'><x><b>Hard Drive Encryption:</b> Encrypting your hard drive adds a simple, fast, and free way to reduce your exposure to data theft and other malicious attacks on your computer.</x>
+</div><div id='Q-14.2' name='Q-14.2' style='display:none;'>GOTO:15</div><div id='Q-15' name='Q-15' style='display:none;'> do you open case, litigation, or client documents on your smartphone?
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'> do you delete these documents from you smartphone after reading them?
+</div><div id='Q-15.1.1' name='Q-15.1.1' style='display:none;'> Is your smartphone's hard drive encrypted?
+</div><div id='Q-15.1.1.1' name='Q-15.1.1.1' style='display:none;'>GOTO:16</div><div id='D-15.1.1.2' name='D-15.1.1.2' style='display:none;'><x><b>Smartphone Encryption:</b> Encrypting your smartphone hard drive is just as important as encrypting your computer hard drive. Consider doing so using an approved application.</x>
+</div><div id='Q-15.1.1.2' name='Q-15.1.1.2' style='display:none;'>GOTO:16</div><div id='D-15.1.2' name='D-15.1.2' style='display:none;'><x><b>Smartphone Documents</b>: If you open documents on your smartphone, particularly E-Mail attachments, these documents are typically downloaded and saved locally. If the documents contain sensitive information, consider deleting them after you have read them.</x>
+</div><div id='Q-15.1.2' name='Q-15.1.2' style='display:none;'>GOTO:16</div><div id='Q-15.1.3' name='Q-15.1.3' style='display:none;'>GOTO:16</div><div id='Q-15.2' name='Q-15.2' style='display:none;'>GOTO:17</div><div id='Q-15.3' name='Q-15.3' style='display:none;'>GOTO:17</div><div id='Q-16' name='Q-16' style='display:none;'> Is your smartphone set to automatically lock?
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'>GOTO:17</div><div id='D-16.2' name='D-16.2' style='display:none;'><x><b>Smartphone Lock:</b> You should set your phone to lock at all times.</x>
+</div><div id='Q-16.2' name='Q-16.2' style='display:none;'>GOTO:17</div><div id='Q-17' name='Q-17' style='display:none;'> How is your workplace internet access provided?
+</div><div id='Q-17.1' name='Q-17.1' style='display:none;'> Do other organizations or businesses in your office have access to this same network?
+</div><div id='D-17.1.1' name='D-17.1.1' style='display:none;'><x><b>Others Have Network Access:</b> This is a strong risk given you may not have control over other organization's employees, network usage habits, and who they may grant permission of access to. At a minimum consider a Virtual Private Network tool, this will encrypt your network traffic. Ensure any network drives your organization uses are password protected.</x>
+</div><div id='Q-17.1.1' name='Q-17.1.1' style='display:none;'>GOTO:17.1.2</div><div id='Q-17.1.2' name='Q-17.1.2' style='display:none;'> Do you provide the WiFi password to clients, guests, or others that do not work for your organization?
+</div><div id='D-17.1.2.1' name='D-17.1.2.1' style='display:none;'><x><b>Guest Network Access:</b> At a minimum set up a guest network if you are allowing access to your network by users other than those that belong to your organization.</x>
+</div><div id='Q-17.1.2.1' name='Q-17.1.2.1' style='display:none;'>GOTO:17.1.2.2</div><div id='Q-17.1.2.2' name='Q-17.1.2.2' style='display:none;'> Is your WiFi password posted in writing anywhere in the office?
+</div><div id='D-17.1.2.2.1' name='D-17.1.2.2.1' style='display:none;'><x><b>Posted WiFi Passwords:</b> A WiFi password your employees can see is a WiFi password guests, delivery people, and even passers-by can see. This may provide easy unwanted access to your network. Consider not posting your WiFi password in the open.</x>
+</div><div id='Q-17.1.2.2.1' name='Q-17.1.2.2.1' style='display:none;'>GOTO:18</div><div id='Q-17.1.2.2.2' name='Q-17.1.2.2.2' style='display:none;'>GOTO:18</div><div id='Q-17.2' name='Q-17.2' style='display:none;'>GOTO:18</div><div id='Q-17.3' name='Q-17.3' style='display:none;'>GOTO:18</div><div id='Q-18' name='Q-18' style='display:none;'> Thank you for your time. Please click "Complete" to see suggested changes and potential risks based on your answers.
+</div><div id='Q-18.1' name='Q-18.1' style='display:none;'> Thank you.
+     word wrap   |   report bug/issueOutput </div><div id='A-1.1' name='A-1.1' style='display:none;'> By clicking here, I am confirming that I understand:
+	<ol type="1">
+ <li>This Q&A is a <b>class project.</b></li>
+ <li>These questions and results <b>do not</b> constitute legal advice.</li>
+ <li>I <b>should not rely</b> on the information provided in this Q&A.</li>
+ </ol>
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>By clicking here, I am confirming that I understand:
+	<ol type="1">
+ <li>This Q&A is a <b>class project.</b></li>
+ <li>These questions and results <b>do not</b> constitute legal advice.</li>
+ <li>I <b>should not rely</b> on the information provided in this Q&A.</li>
+ </ol></div><div id='A-2.1' name='A-2.1' style='display:none;'> Yes
+</div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'></div><div id='X-2.1' name='X-2.1' style='display:none;'><b>Case Management Software:</b> Case management software may resolve some of the issues in this questionnaire.</div><div id='A-2.2' name='A-2.2' style='display:none;'> No
+</div><div id='A-href-2.2' name='A-href-2.2' style='display:none;'>javascript:void('');</div><div id='A-target-2.2' name='A-target-2.2' style='display:none;'></div><div id='X-2.2' name='X-2.2' style='display:none;'><b> Case Management Software:</b> Consider a case management software, as it will solve many of these issues simultaneously.</div><div id='A-3.1' name='A-3.1' style='display:none;'> I understand.
+</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>I understand.</div><div id='A-4.1' name='A-4.1' style='display:none;'> Yes
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>Yes</div><div id='A-4.1.1' name='A-4.1.1' style='display:none;'> Yes
+</div><div id='A-href-4.1.1' name='A-href-4.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1' name='A-target-4.1.1' style='display:none;'></div><div id='X-4.1.1' name='X-4.1.1' style='display:none;'><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</div><div id='A-4.1.2' name='A-4.1.2' style='display:none;'> No
+</div><div id='A-href-4.1.2' name='A-href-4.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2' name='A-target-4.1.2' style='display:none;'></div><div id='X-4.1.2' name='X-4.1.2' style='display:none;'>No</div><div id='A-4.2' name='A-4.2' style='display:none;'> No
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>No</div><div id='A-5.1' name='A-5.1' style='display:none;'> Cloud Storage Service
+</div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>Cloud Storage Service</div><div id='A-5.1.1' name='A-5.1.1' style='display:none;'> Yes
+</div><div id='A-href-5.1.1' name='A-href-5.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.1' name='A-target-5.1.1' style='display:none;'></div><div id='X-5.1.1' name='X-5.1.1' style='display:none;'><b>Cloud Storage & User Access:</b> Cloud drive services provide users with tools to track access, including who has access to specific documents, folders, and access to the entire drive. Track this information and ensure access is restricted only to those who need it.</div><div id='A-5.1.2' name='A-5.1.2' style='display:none;'> No
+</div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'>No</div><div id='A-5.2' name='A-5.2' style='display:none;'> Local Network Drive
+</div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'></div><div id='X-5.2' name='X-5.2' style='display:none;'>Local Network Drive</div><div id='A-5.2.1' name='A-5.2.1' style='display:none;'> Yes
+</div><div id='A-href-5.2.1' name='A-href-5.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.2.1' name='A-target-5.2.1' style='display:none;'></div><div id='X-5.2.1' name='X-5.2.1' style='display:none;'><b>Local Network Drive Users:</b> Carefully track who has access to networked drives. Consider making use of tools that assign user credentials, limit access, track access, and provide reports. Consider keeping sensitive documents on a separate drive.</div><div id='A-5.2.2' name='A-5.2.2' style='display:none;'> No
+</div><div id='A-href-5.2.2' name='A-href-5.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2.2' name='A-target-5.2.2' style='display:none;'></div><div id='X-5.2.2' name='X-5.2.2' style='display:none;'>No</div><div id='A-5.3' name='A-5.3' style='display:none;'> Both
+</div><div id='A-href-5.3' name='A-href-5.3' style='display:none;'>javascript:void('');</div><div id='A-target-5.3' name='A-target-5.3' style='display:none;'></div><div id='X-5.3' name='X-5.3' style='display:none;'>Both</div><div id='A-6.1' name='A-6.1' style='display:none;'> Yes
+</div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>Yes</div><div id='A-6.2' name='A-6.2' style='display:none;'> No
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'>Files on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect the drive makes it more difficult for adverse parties, viruses, and other risks to access your information.</div><div id='A-6.2.1' name='A-6.2.1' style='display:none;'> Yes
+</div><div id='A-href-6.2.1' name='A-href-6.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.2.1' name='A-target-6.2.1' style='display:none;'></div><div id='X-6.2.1' name='X-6.2.1' style='display:none;'>Yes</div><div id='A-6.2.2' name='A-6.2.2' style='display:none;'> No
+</div><div id='A-href-6.2.2' name='A-href-6.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2.2' name='A-target-6.2.2' style='display:none;'></div><div id='X-6.2.2' name='X-6.2.2' style='display:none;'><b>File & Document Passwords:</b> Files and documents on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect important documents makes it more difficult for adverse parties, viruses, and other risks to access your information, however, adding a password to the drive itself is also helpful, and requires fewer passwords.</div><div id='A-7.1' name='A-7.1' style='display:none;'> Yes
+</div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>Yes</div><div id='A-7.2' name='A-7.2' style='display:none;'> No - <b>NEVER.</b>
+</div><div id='A-href-7.2' name='A-href-7.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2' name='A-target-7.2' style='display:none;'></div><div id='X-7.2' name='X-7.2' style='display:none;'>No - <b>NEVER.</b></div><div id='A-7.2.1' name='A-7.2.1' style='display:none;'> Cloud Sharing Service
+</div><div id='A-href-7.2.1' name='A-href-7.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.1' name='A-target-7.2.1' style='display:none;'></div><div id='X-7.2.1' name='X-7.2.1' style='display:none;'><b>Cloud Document Sharing:</b> When sharing documents with others over cloud services, make sure to verify permissions used. If you do not want a recipient to have permanent access to a document, or the ability to alter the document or view changes you might make to the same document, verify that you can set access permissions to expire.</div><div id='A-7.2.1.1' name='A-7.2.1.1' style='display:none;'> Yes
+</div><div id='A-href-7.2.1.1' name='A-href-7.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.1.1' name='A-target-7.2.1.1' style='display:none;'></div><div id='X-7.2.1.1' name='X-7.2.1.1' style='display:none;'>Yes</div><div id='A-7.2.1.2' name='A-7.2.1.2' style='display:none;'> No
+</div><div id='A-href-7.2.1.2' name='A-href-7.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.1.2' name='A-target-7.2.1.2' style='display:none;'></div><div id='X-7.2.1.2' name='X-7.2.1.2' style='display:none;'>No</div><div id='A-7.2.2' name='A-7.2.2' style='display:none;'> Secure File Sharing Service
+</div><div id='A-href-7.2.2' name='A-href-7.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.2' name='A-target-7.2.2' style='display:none;'></div><div id='X-7.2.2' name='X-7.2.2' style='display:none;'>Secure File Sharing Service</div><div id='A-7.2.2.1' name='A-7.2.2.1' style='display:none;'> Yes
+</div><div id='A-href-7.2.2.1' name='A-href-7.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.2.1' name='A-target-7.2.2.1' style='display:none;'></div><div id='X-7.2.2.1' name='X-7.2.2.1' style='display:none;'>Yes</div><div id='A-7.2.2.2' name='A-7.2.2.2' style='display:none;'> No
+</div><div id='A-href-7.2.2.2' name='A-href-7.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.2.2' name='A-target-7.2.2.2' style='display:none;'></div><div id='X-7.2.2.2' name='X-7.2.2.2' style='display:none;'>No</div><div id='A-7.2.3' name='A-7.2.3' style='display:none;'> None of the Above.
+</div><div id='A-href-7.2.3' name='A-href-7.2.3' style='display:none;'>javascript:void('');</div><div id='A-target-7.2.3' name='A-target-7.2.3' style='display:none;'></div><div id='X-7.2.3' name='X-7.2.3' style='display:none;'>None of the Above.</div><div id='A-8.1' name='A-8.1' style='display:none;'> Yes
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Yes</div><div id='A-8.2' name='A-8.2' style='display:none;'> No
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>No</div><div id='A-9.1' name='A-9.1' style='display:none;'> Paid
+</div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>Paid</div><div id='A-9.2' name='A-9.2' style='display:none;'> Free
+</div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'><b>Free E-Mail Service:</b> Free E-Mail providers generally do not have rigorous privacy and data security standards. It is important you research your provider's privacy and security practices and consider making use of a paid E-Mail service.</div><div id='A-10.1' name='A-10.1' style='display:none;'> Using mail, E-Mail, Fax, or in-person meetings with the person who must sign.
+</div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'><b>Document Signatures:</b> Consider an E-Signature tool. This allows you to acquire signatures whenever you need them, so long as the signing party has access to a computer, tablet, or smartphone.</div><div id='A-10.2' name='A-10.2' style='display:none;'> An electronic signature software.
+</div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'>An electronic signature software.</div><div id='A-11.1' name='A-11.1' style='display:none;'> Yes
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Yes</div><div id='A-11.2' name='A-11.2' style='display:none;'> No
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'><b>Document Collaboration:</b> Try a screen sharing tool! These tools allow you to work on documents in real time with others, with no need to exchange multiple copies.</div><div id='A-12.1' name='A-12.1' style='display:none;'> Yes
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>Yes</div><div id='A-12.2' name='A-12.2' style='display:none;'> No
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'><b>Computer Password Protection:</b> It is essential that you lock and password protect any computer, personal or business! Make sure to password protect your computer and set it to automatically lock after a period of idleness.</div><div id='A-13.1' name='A-13.1' style='display:none;'> Yes
+</div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'></div><div id='X-13.1' name='X-13.1' style='display:none;'>Yes</div><div id='A-13.2' name='A-13.2' style='display:none;'> No
+</div><div id='A-href-13.2' name='A-href-13.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.2' name='A-target-13.2' style='display:none;'></div><div id='X-13.2' name='X-13.2' style='display:none;'>No</div><div id='A-14.1' name='A-14.1' style='display:none;'> Yes
+</div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>Yes</div><div id='A-14.2' name='A-14.2' style='display:none;'> No/Not Sure
+</div><div id='A-href-14.2' name='A-href-14.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.2' name='A-target-14.2' style='display:none;'></div><div id='X-14.2' name='X-14.2' style='display:none;'><b>Hard Drive Encryption:</b> Encrypting your hard drive adds a simple, fast, and free way to reduce your exposure to data theft and other malicious attacks on your computer.</div><div id='A-15.1' name='A-15.1' style='display:none;'> Yes
+</div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>Yes</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'> Yes
+</div><div id='A-href-15.1.1' name='A-href-15.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1' name='A-target-15.1.1' style='display:none;'></div><div id='X-15.1.1' name='X-15.1.1' style='display:none;'>Yes</div><div id='A-15.1.1.1' name='A-15.1.1.1' style='display:none;'> Yes
+</div><div id='A-href-15.1.1.1' name='A-href-15.1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1.1' name='A-target-15.1.1.1' style='display:none;'></div><div id='X-15.1.1.1' name='X-15.1.1.1' style='display:none;'>Yes</div><div id='A-15.1.1.2' name='A-15.1.1.2' style='display:none;'> No
+</div><div id='A-href-15.1.1.2' name='A-href-15.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.1.2' name='A-target-15.1.1.2' style='display:none;'></div><div id='X-15.1.1.2' name='X-15.1.1.2' style='display:none;'><b>Smartphone Encryption:</b> Encrypting your smartphone hard drive is just as important as encrypting your computer hard drive. Consider doing so using an approved application.</div><div id='A-15.1.2' name='A-15.1.2' style='display:none;'> No
+</div><div id='A-href-15.1.2' name='A-href-15.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.2' name='A-target-15.1.2' style='display:none;'></div><div id='X-15.1.2' name='X-15.1.2' style='display:none;'><b>Smartphone Documents</b>: If you open documents on your smartphone, particularly E-Mail attachments, these documents are typically downloaded and saved locally. If the documents contain sensitive information, consider deleting them after you have read them.</div><div id='A-15.1.3' name='A-15.1.3' style='display:none;'> Not Sure
+</div><div id='A-href-15.1.3' name='A-href-15.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.3' name='A-target-15.1.3' style='display:none;'></div><div id='X-15.1.3' name='X-15.1.3' style='display:none;'>Not Sure</div><div id='A-15.2' name='A-15.2' style='display:none;'> No.
+</div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'>No.</div><div id='A-15.3' name='A-15.3' style='display:none;'> I Do not Own a Smartphone.
+</div><div id='A-href-15.3' name='A-href-15.3' style='display:none;'>javascript:void('');</div><div id='A-target-15.3' name='A-target-15.3' style='display:none;'></div><div id='X-15.3' name='X-15.3' style='display:none;'>I Do not Own a Smartphone.</div><div id='A-16.1' name='A-16.1' style='display:none;'> Yes
+</div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>Yes</div><div id='A-16.2' name='A-16.2' style='display:none;'> No
+</div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'><b>Smartphone Lock:</b> You should set your phone to lock at all times.</div><div id='A-17.1' name='A-17.1' style='display:none;'> Through my/our office lease - provided via the building lessor, management company, etc.
+</div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>Through my/our office lease - provided via the building lessor, management company, etc.</div><div id='A-17.1.1' name='A-17.1.1' style='display:none;'> Yes
+</div><div id='A-href-17.1.1' name='A-href-17.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.1' name='A-target-17.1.1' style='display:none;'></div><div id='X-17.1.1' name='X-17.1.1' style='display:none;'><b>Others Have Network Access:</b> This is a strong risk given you may not have control over other organization's employees, network usage habits, and who they may grant permission of access to. At a minimum consider a Virtual Private Network tool, this will encrypt your network traffic. Ensure any network drives your organization uses are password protected.</div><div id='A-17.1.2' name='A-17.1.2' style='display:none;'> No
+</div><div id='A-href-17.1.2' name='A-href-17.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2' name='A-target-17.1.2' style='display:none;'></div><div id='X-17.1.2' name='X-17.1.2' style='display:none;'>No</div><div id='A-17.1.2.1' name='A-17.1.2.1' style='display:none;'> Yes
+</div><div id='A-href-17.1.2.1' name='A-href-17.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.1' name='A-target-17.1.2.1' style='display:none;'></div><div id='X-17.1.2.1' name='X-17.1.2.1' style='display:none;'><b>Guest Network Access:</b> At a minimum set up a guest network if you are allowing access to your network by users other than those that belong to your organization.</div><div id='A-17.1.2.2' name='A-17.1.2.2' style='display:none;'> No
+</div><div id='A-href-17.1.2.2' name='A-href-17.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.2' name='A-target-17.1.2.2' style='display:none;'></div><div id='X-17.1.2.2' name='X-17.1.2.2' style='display:none;'>No</div><div id='A-17.1.2.2.1' name='A-17.1.2.2.1' style='display:none;'> Yes
+</div><div id='A-href-17.1.2.2.1' name='A-href-17.1.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.2.1' name='A-target-17.1.2.2.1' style='display:none;'></div><div id='X-17.1.2.2.1' name='X-17.1.2.2.1' style='display:none;'><b>Posted WiFi Passwords:</b> A WiFi password your employees can see is a WiFi password guests, delivery people, and even passers-by can see. This may provide easy unwanted access to your network. Consider not posting your WiFi password in the open.</div><div id='A-17.1.2.2.2' name='A-17.1.2.2.2' style='display:none;'> No
+</div><div id='A-href-17.1.2.2.2' name='A-href-17.1.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2.2.2' name='A-target-17.1.2.2.2' style='display:none;'></div><div id='X-17.1.2.2.2' name='X-17.1.2.2.2' style='display:none;'>No</div><div id='A-17.2' name='A-17.2' style='display:none;'> Through a commercial or business internet service provider.
+</div><div id='A-href-17.2' name='A-href-17.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.2' name='A-target-17.2' style='display:none;'></div><div id='X-17.2' name='X-17.2' style='display:none;'>Through a commercial or business internet service provider.</div><div id='A-17.3' name='A-17.3' style='display:none;'> Other
+</div><div id='A-href-17.3' name='A-href-17.3' style='display:none;'>javascript:void('');</div><div id='A-target-17.3' name='A-target-17.3' style='display:none;'></div><div id='X-17.3' name='X-17.3' style='display:none;'>Other</div><div id='A-18.1' name='A-18.1' style='display:none;'> Complete
+</div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:submit2('https://www.qnamarkup.org/doc/parse/html/','POST','t','You may download or print the suggestions here.')</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'>Complete</div>
+<script>
+	var QVnames = [['1','intro'],['1.1','1.1'],['2','case_management'],['2.1','case_mgmt_yes'],['2.2','case_management_2'],['3','case_mgmt_warning'],['3.1','3.1'],['4','work_personal_computer'],['4.1','work_personal_computer_yes'],['4.1.1','work_personal_computer_yes_2'],['4.1.2','4.1.2'],['4.2','work_personal_computer_no'],['5','store_docs'],['5.1','cloud_access'],['5.1.1','cloud_access_2'],['5.1.2','cloud_access_3'],['5.2','local_drive_access'],['5.2.1','local_drive_access_2'],['5.2.2','local_drive_access_3'],['5.3','5.3'],['6','drive_pword'],['6.1','drive_pword_yes'],['6.2','docs_pword'],['6.2.1','docs_pword_yes'],['6.2.2','docs_pword_no'],['7','client_docs_email'],['7.1','client_docs_email_yes'],['7.2','how_send_if_not_email'],['7.2.1','7.2.1'],['7.2.1.1','7.2.1.1'],['7.2.1.2','7.2.1.2'],['7.2.2','7.2.2'],['7.2.2.1','7.2.2.1'],['7.2.2.2','7.2.2.2'],['7.2.3','7.2.3'],['8','client_same'],['8.1','8.1'],['8.2','8.2'],['9','paid_or_free'],['9.1','9.1'],['9.2','9.2'],['10','client_sign'],['10.1','10.1'],['10.2','10.2'],['11','client_collab'],['11.1','11.1'],['11.2','11.2'],['12','computer_pword'],['12.1','computer_pword_yes'],['12.2','computer_pword_no'],['13','local_docs_pword'],['13.1','local_docs_pword_yes'],['13.2','local_docs_pword_no'],['14','comp_lock'],['14.1','comp_lock_yes'],['14.2','comp_lock_no'],['15','smartphone'],['15.1','smartphone2'],['15.1.1','smartphone3'],['15.1.1.1','smartphone4'],['15.1.1.2','smartphone5'],['15.1.2','15.1.2'],['15.1.3','15.1.3'],['15.2','15.2'],['15.3','15.3'],['16','phone_lock'],['16.1','16.1'],['16.2','16.2'],['17','isp'],['17.1','17.1'],['17.1.1','17.1.1'],['17.1.2','17.1.2'],['17.1.2.1','17.1.2.1'],['17.1.2.2','17.1.2.2'],['17.1.2.2.1','17.1.2.2.1'],['17.1.2.2.2','17.1.2.2.2'],['17.2','17.2'],['17.3','17.3'],['18','end'],['18.1','18.1']];
+</script>
+</textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text><p><b>Video Intro.   Syntax  |   Gallery   GitHub QnA Markup Editor BETA  MarkupStyle   Load File   New</b></p><p>By  Small Firm Efficiency and Security Interview</p><p> Dylan C. Barrett</p></div></div><p align=center><a href="javascript:void('');" onClick="shoh('credits');">credits</a> | <a href="https://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
+<script type="text/javascript">
+	var QNum = 0;
+	var Qhtml = "";
+	var Dhtml = "";
+	var label = "";
+	var GOTOfired = 0;
+	var path = [];
+	var doc_bin = [];
+	var convo_bin = [];
+	var freetext = 0;
+	var goingback = 0;
+
+	$("#conversation input").on("keypress", 'form', function (e) {
+    	var code = e.keyCode || e.which;
+    	if (code == 13) {
+        	e.preventDefault();
+        	return false;
+    	}
+	});
+
+	function answerQ(lb,restart) {
+		currentQ = label;
+		label = lb;
+		Dhtml = 'D-'+label;
+		Qhtml = 'Q-'+label;
+		var Ahtml = 'A-'+label;
+		var Jhtml = 'J-'+QNum;
+		var Xhtml = 'X-'+label;
+		var Xihtml = 'Xi-'+label;
+		
+		var input_error = 0;
+		if (restart == undefined) {
+			var regexp = new RegExp("\<variable\>");
+			//if (document.getElementById(Xihtml)) {
+			//	console.log("document.getElementById("+Xihtml+").value: "+document.getElementById(Xihtml).value);
+			//} else {
+			//	console.log("NO document.getElementById("+Xihtml+").value: ");
+			//}
+			if (document.getElementById(Ahtml).innerHTML.match(regexp)) {
+				document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/(^\s*|\s*$)/,"");
+				if (document.getElementById(Xihtml).value == "") {
+					input_error = "Your answer appears to be empty.";
+					label = currentQ;
+				} else {
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/</g,"<");
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/>/g,">");
+				}
+			} 
+		}
+			
+		if (input_error != 0) {
+			alert(input_error);
+			document.getElementById(Xihtml).focus();			
+		} else {
+			if (restart == undefined) {
+				document.getElementById('QandA').innerHTML += "<div id=\"break-at-"+QNum+"\" class='frame'><div class='full'><div class='ans_text'>"+document.getElementById(Ahtml).innerHTML+"</div></div><div class='ans_arrow'></div></div></div></div>";
+				// insert answer from button
+				if (document.getElementById(valueis(currentQ))) {
+					document.getElementById(valueis(currentQ)).outerHTML='';
+				}
+				if (document.getElementById(Xihtml)) {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xihtml).value+"</textarea>\n" + document.getElementById('QandA').innerHTML				
+				} else {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xhtml).innerHTML+"</textarea>\n" + document.getElementById('QandA').innerHTML
+				}
+				if (document.getElementById('QandA').innerHTML.match(regexp)) {
+				 	var duplicatevars = new RegExp("id=\""+document.getElementById(Xhtml).innerHTML+"(.)*"+document.getElementById(Xhtml).innerHTML+"\"","g");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(duplicatevars, "");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/\<variable\>(\<\/variable\>)?/, "<input type=hidden id=\""+document.getElementById(Xhtml).innerHTML+"\" name=\""+document.getElementById(Xhtml).innerHTML+"\" value=\""+document.getElementById(Xihtml).value+"\"/>"+document.getElementById(Xihtml).value);
+					//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/\<variable\>(\<\/variable\>)?/, document.getElementById(Xihtml).value+"\n");
+					var thisvariable = new RegExp("<(X|x)>"+document.getElementById(Xhtml).innerHTML+"<\/(X|x)>","g");
+					//document.getElementById('doc').innerHTML = document.getElementById('doc').innerHTML.replace(thisvariable, document.getElementById(document.getElementById(Xhtml).innerHTML).innerHTML);
+					//document.getElementById('ondeck').innerHTML = document.getElementById('ondeck').innerHTML.replace(thisvariable, document.getElementById(valueis(currentQ)).innerHTML);
+					//console.log("thisvariable: "+thisvariable);
+					//console.log("Variable name: "+valueis(currentQ));
+					//console.log("Variable value: "+document.getElementById(valueis(currentQ)).innerHTML);
+					if(document.getElementById(Ahtml).innerHTML != "") { 
+						//document.getElementById('transcript').value += "USER: "+document.getElementById(Xihtml).value+"\n"; 
+						convo_bin.push("USER: "+document.getElementById(Xihtml).value+"\n");
+					}
+				} else {
+					//document.getElementById('transcript').value += "USER: "+document.getElementById(Ahtml).innerHTML+"\n";
+					convo_bin.push("USER: "+document.getElementById(Ahtml).innerHTML+"\n");
+				}
+				document.getElementById('Choices').innerHTML = '';
+				if (goingback == 0) {
+					setTimeout(function() {renderQnA(Qhtml,Jhtml,Dhtml,restart)}, 300);
+				} else {
+					renderQnA(Qhtml,Jhtml,Dhtml,restart);
+				}
+			} else {
+				document.getElementById('Choices').innerHTML = '';
+				path = [];
+				renderQnA(Qhtml,Jhtml,Dhtml,restart);			
+			}
+
+		}
+		
+	}
+
+
+	function renderQnA(Qht,Jht,Dht,restar) {
+		Dhtml = Dht;
+					
+		GOTOfired = 0;
+		path.push(label);
+
+		swapGOTO(Qht,Jht);
+
+		console.log("After swap: "+GOTOfired);
+
+		if (GOTOfired == 0) {
+			document.getElementById('QandA').innerHTML += "<div id="+Jht+" style=\"float:left;width:100%;height:1px;\"> </div>";
+		}
+		document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+swapvar(document.getElementById(Qhtml).innerHTML)+"</div></div><div class='question_arrow'></div></div>";		
+
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\>){2}/gi,"</div></div><div class='question_arrow'></div></div></div></div><div class='frame'><div class='full'><div class='question_text'>");
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\> \<br\>)/gi,"<br><br>");
+
+		// add question 
+		//document.getElementById('transcript').value += swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		this_text = swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		this_text = this_text.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		convo_bin.push(this_text);
+				
+		// make push doc into array in doc() cycle through array and put into output
+		// maybe remove doc div
+		if (document.getElementById(Dhtml)) {
+			doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+			console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+			//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+		}
+						
+		tmp = getElementsByIdRegExp("div", "A-"+label+"(\\.{1}\\d){1}$");
+		a_href = getElementsByIdRegExp("div", "A-href-"+label+"(\\.{1}\\d){1}$");
+		a_target = getElementsByIdRegExp("div", "A-target-"+label+"(\\.{1}\\d){1}$");
+		tmp_x = getElementsByIdRegExp("div", "X-"+label+"(\\.{1}\\d){1}$");
+		var Xishere = 0;
+		for ( var i = 0; i < tmp.length; i++ ) {
+			var nextlabel = tmp[i].id.substr(2);
+			var Xihtml = 'Xi-'+nextlabel;
+			var regexp = "\<variable\>";
+			var regexp_js = "^javascript:";
+			var script_call = "";
+			if (tmp[i].innerHTML.match(regexp)) {
+				if (a_href[i].innerHTML.match('^(_blank:)?javascript:')) {
+					script_call = a_href[i].innerHTML.replace(/^(_blank:)?javascript:/gi,"");
+				} else {
+					if (a_href[i].innerHTML.match('^_blank:')) {
+						script_call = "window.open('"+a_href[i].innerHTML.replace(/^_blank:/,"")+"','_blank');";			
+					} else {
+						script_call = "location.href = '"+a_href[i].innerHTML+"';";
+					}
+				}
+				document.getElementById('Choices').innerHTML += "<div class=\"xdiv\"><input type=\""+a_target[i].innerHTML+"\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"if (event.keyCode==13){answerQ('"+nextlabel+"');"+script_call+"}\"/><a href=\"javascript:void('');\" class=\"xbutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\"><span class=\"qpad\">Save above text as answer.</span></a></div>";
+				Xishere = Xihtml;
+				freetext = Xihtml;
+			} else if (a_href[i].innerHTML.match(regexp_js) && a_href[i].innerHTML != "javascript:void('');") {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				var script_call = a_href[i].innerHTML.replace(/^javascript:/gi,"");
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";							
+				freetext = 0;
+			} else {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				document.getElementById('Choices').innerHTML += "<a href=\""+a_href[i].innerHTML+"\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";				
+				freetext = 0;
+			}
+		}			
+
+		if (restar == undefined) {
+			
+			document.getElementById('Choices').innerHTML += "<div class=\"standard_buttons\">";
+			if (QNum > 1) { 
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"goback(QNum);\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";
+			} else if (QNum == 1) {
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"startAT('1');\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";				
+			}
+			document.getElementById('Choices').innerHTML += "</div>"
+		}
+				
+		if (QNum != 0) { 
+			if (goingback == 0) {
+				scroll2Q(Jht,800);           	
+			} else {
+				window.scrollTo(0, document.getElementById(Jht).offsetTop);     		
+			}
+		} else if (restar != undefined) {
+			window.scrollTo(0,0);
+		}
+		if (Xishere != 0 && window.self == window.top) {
+			console.log("Set focus for: "+Xishere);
+			document.getElementById(Xishere).focus();
+		}
+		console.log("Q#: "+QNum);
+		console.log("New Path: "+path);
+		QNum++;
+		goingback = 0;
+					
+	}
+
+	
+	function swapGOTO(QH,JH) {
+		var regex = new RegExp("GOTO:(\d*)(\.\d+)*");
+		if (regex.test(document.getElementById(QH).innerHTML)) {
+			var Qtext = document.getElementById(QH).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/);
+			document.getElementById('QandA').innerHTML += "<div id="+JH+" style=\"float:left;width:100%;height:1px;\"> </div>";
+			// Add question
+			// note I added () around the < to avoid a < followed by a ? which causes problems in php
+			var Qtexttrans = document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"");
+			Qtexttrans = Qtexttrans.replace(/\s*$/,"");
+			if (Qtexttrans != "") {
+				//document.getElementById('transcript').value += swapvar("BOT: "+Qtexttrans+"\n");
+				convo_bin.push(swapvar("BOT: "+Qtexttrans+"\n"));
+			}
+			if (document.getElementById(QH).innerHTML.match(/^GOTO:(\d*)(.\s*\d+)*/)) {
+				document.getElementById('QandA').innerHTML += document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">");
+			} else {
+				document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+ swapvar(document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">"))+"</div></div><div class='question_arrow'></div></div>";						
+			}
+			// replace GOTO with text
+			label = Qtext[0].replace("GOTO:","");
+			Qhtml = 'Q-'+label;
+			if (document.getElementById(Dhtml)) {
+				doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+				console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+				//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+			}
+			Dhtml = 'D-'+label;
+			GOTOfired = 1;
+			console.log("In swap: "+GOTOfired);
+			swapGOTO(Qhtml,JH);
+		}
+	}
+
+	
+	function scroll2Q(id,speed) {
+		var top = document.getElementById(id).offsetTop; //Getting Y of target element
+		console.log("Jump to Y for ("+id+"): "+top);
+		//adapted from https://github.com/Yappli/smooth-scroll
+		var moving_frequency = 5; // Affects performance !
+		var hop_count = speed/moving_frequency
+        var getScrollTopDocumentAtBegin = document.documentElement.scrollTop + document.body.scrollTop;
+        var gap = (top - getScrollTopDocumentAtBegin) / hop_count;
+		for(var i = 1; i <= hop_count; i++)
+        {
+        	(function()
+           	{
+           		var hop_top_position = gap*i;
+           	    setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+           	 })();
+        }
+	}
+
+	function getElementsByIdIs(selectorTag, name) {
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+			//omitting undefined null check for brevity
+			if (myPosts[0].id == name) {
+				items.push(myPosts[0]);
+			}
+		
+		return items;
+	}
+
+	function getElementsByIdRegExp(selectorTag, expression) {
+		// note you need to escape \ in the expression with \, i.e., \\ = \
+		var regex = new RegExp(expression);
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+		for (var i = 0; i < myPosts.length; i++) {
+			if (regex.test(myPosts[i].id)) {
+				items.push(myPosts[i]);
+			}
+		}
+		
+		return items;
+	}	
+
+	// startAT QnA
+	function startAT(id) {
+		document.getElementById('ondeck').innerHTML = document.getElementById('original').value;
+		document.getElementById('QandA').innerHTML = "";
+		//document.getElementById('transcript').value = "";
+		doc_bin = [];
+		convo_bin = [];
+		QNum = 0;
+		answerQ(id,'1');
+	}
+		
+	//show funtion
+	function show(id) { 
+   		if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'block';
+    	} else { 
+        	if (document.layers) {  
+            	document.id.display = 'block';
+        	} else {
+                document.all.id.style.display = 'block';
+        	}
+    	}
+	}
+
+	//hide funtion
+	function hide(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'none';         
+    	} else { 
+        	if (document.layers) {  
+                document.id.display = 'none';
+        	} else {
+                document.all.id.style.display = 'none';
+        	}
+    	}
+	}
+
+	//show OR hide funtion depends on if element is shown or hidden
+	function shoh(id) { 
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	if (document.getElementById(id).style.display == "none"){
+            	document.getElementById(id).style.display = 'block';
+        	} else {
+            	document.getElementById(id).style.display = 'none';         
+        	}   
+    	} else { 
+        	if (document.layers) {  
+            	if (document.id.display == "none"){
+                	document.id.display = 'block';
+            	} else {
+                	document.id.display = 'none';
+            	}
+        	} else {
+            	if (document.all.id.style.visibility == "none"){
+                	document.all.id.style.display = 'block';
+            	} else {
+                	document.all.id.style.display = 'none';
+            	}
+        	}
+    	}
+	}
+	
+	function swapvar(input) {
+		var output; 
+		for(var i = 0; i < QVnames.length; i++) {
+			if (document.getElementById(QVnames[i][1])) {
+				var item = QVnames[i][1].replace(/\./g,"\\.");
+				var varegx = new RegExp("<x>"+item+"<\/x>","gi");
+				//console.log(QVnames[i][1]);
+				input = input.replace(varegx,document.getElementById(QVnames[i][1]).innerHTML);
+			} 
+		}
+		output = input
+		return output
+	}
+	
+	function docforindex(indexID) {
+		for(var i = 0; i < doc_bin.length; i++) {
+			if(doc_bin[i][1] == indexID) {
+				return true;
+			}
+		}
+	}
+	function indexis(variablename) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][1] == variablename) {
+				return QVnames[i][0];
+			}
+		}
+	}
+	function valueis(variablekey) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][0] == variablekey) {
+				return QVnames[i][1];
+			}
+		}
+	}
+	
+	function look4goto(qn,id) {
+		console.log("GOTO SEARCH: "+id);
+		var qID = "Q-"+id;
+		// If there's a doc in the XXXXXXXXXXXXXXXX, remove it.
+		if (docforindex(path.indexOf(id))) {
+			console.log("DOC FOUND "+id);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		convo_bin.splice(-2,2);
+		var re = new RegExp("GOTO:(([a-z0-9\._-]*)\s*)$","gi");
+		if (document.getElementById(qID).innerHTML.match(re)) {
+			convo_bin.splice(-1,1);
+			console.log("GOTO FOUND: "+id);
+			textinput = re.exec(document.getElementById(qID).innerHTML)[2]+"";
+			if (docforindex(indexis(textinput))) {
+				document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(textinput)).innerHTML;
+				console.log("DOC FOUND "+textinput);
+				doc_bin.splice(doc_bin.length-1,1);
+			}
+			look4goto(qn,textinput);
+		}
+	}
+	
+	function goback(qn) {
+		Qlast = qn - 3
+		qn = qn - 2;
+		label = path[qn];
+		goingback = 1;
+		
+		console.log("GO BACK TO:"+qn);
+		var re = new RegExp('(((^|\\n).*)*)<div id="break-at-'+qn+'" class="frame">((.*)(\\W.*))*', 'g');
+		document.getElementById("QandA").innerHTML = document.getElementById("QandA").innerHTML.replace(re, '$1');
+		document.getElementById('Choices').innerHTML += "<input type=\"hidden\" id=\"Xi-"+path[qn]+"\" name=\"Xi-"+path[qn]+"\" value=\"\">";
+			console.log("####################: "+path[path.length-1]);
+		
+		//look4goto(qn,path[path.length-1]);
+		
+		path.splice(-1,1);
+		convo_bin.splice(-4,4);
+		//convo_bin.splice(-2,2);
+
+		// If there's a doc in the last Q that you're removing, hold on to it.
+		// And put it back after you've removed it. When you rerender the Q.
+		if (document.getElementById("X-"+path[qn]) && document.getElementById(valueis(path[Qlast]))) {
+			document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(path[Qlast])).innerHTML;
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		// If there's a doc in the current Q, remove it.
+		if (docforindex(currentQ)) {
+			console.log("DOC FOUND (current) "+currentQ);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		// If there's a doc in the queued up Q, remove it. 
+		if (document.getElementById(Dhtml)) {
+			console.log("DOC FOUND (ondeck)"+Dhtml);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		
+		look4goto(qn,path[path.length-1]);
+		
+		if (freetext != 0) {
+			document.getElementById(freetext).value = "";
+		}
+		QNum = qn;
+		loadQ = path[path.length-1];
+		path.splice(-1,1);
+		
+		console.log("Reload ans for: "+loadQ);
+		answerQ(loadQ);
+	}
+
+	function transcript(output) {
+		var convo_output = "";
+		for (var i = 0, len = convo_bin.length; i < len; i++) {
+			convo_output += convo_bin[i];
+		}
+		if (output == 1) {
+			return convo_output;
+		} else {
+			return convo_output.replace(/<[^>]*>/g,"");
+		}
+	}		
+	
+	function doc() {
+		var doc_output = ""; 
+		for (var i = 0, len = doc_bin.length; i < len; i++) {
+			doc_output += doc_bin[i][0];
+		}
+		return swapvar(doc_output);
+	}	
+	
+	function json_str() {
+		
+		var json_list = "{";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+'"';
+				}
+				json_list = json_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				json_list = json_list.replace(/,$/, '');
+				json_list = json_list+"}";
+			}
+		}
+		return json_list;
+	}
+
+	function mail2(to,subject,body) {
+		to = encodeURIComponent(to);
+		subject = encodeURIComponent(subject);
+		body = encodeURIComponent(body);
+		window.location.href = "mailto:"+to+"?subject="+subject+"&body="+body;
+	}
+	
+	function submit2(action,method,docAs,instructions,transcriptAs,jsonAs,target) {
+		document.FORM.action = action;
+		document.FORM.method = method;
+		if (target) {
+			document.FORM.target = target;
+		} else {
+			document.FORM.target = "_self";		
+		}
+		
+		if (docAs) {
+			if (document.getElementsByName(docAs).length == 0) { 
+				var doctext = document.createElement("textarea");
+				doctext.style.display ='none';
+				doctext.name= docAs;
+				doctext.value= doc();
+				document.getElementById('FORM').appendChild(doctext);
+			} else {
+				$('textarea[name='+docAs+']').val(json_str())
+			}
+			if (instructions) {
+				if (document.getElementsByName('i').length == 0) { 
+					var instructtext = document.createElement("textarea");
+					instructtext.type='hidden';
+					instructtext.style.display ='none';
+					instructtext.name= 'i';
+					instructtext.value= instructions;
+					document.getElementById('FORM').appendChild(instructtext);	
+				} else {
+					$('textarea[name=i]').val(json_str())
+				}
+			}
+		}
+		if (transcriptAs) {
+			if (document.getElementsByName(transcriptAs).length == 0) { 
+				var ttext = document.createElement("textarea");
+				ttext.type='hidden';
+				ttext.style.display ='none';
+				ttext.name= transcriptAs;
+				ttext.value= transcript();
+				document.getElementById('FORM').appendChild(ttext);
+			} else {
+				$('textarea[name='+transcriptAs+']').val(json_str())
+			}
+		}
+		if (jsonAs) {
+			if (document.getElementsByName(jsonAs).length == 0) { 
+				var json = document.createElement("textarea");
+				json.type='hidden';
+				json.style.display ='none';
+				json.name= jsonAs;			
+				json.value= json_str();
+				document.getElementById('FORM').appendChild(json);
+			} else {
+				$('textarea[name='+jsonAs+']').val(json_str())
+			}
+		}
+		var ondeckdiv = document.getElementById('ondeck').innerHTML;
+		var rawmarkupdiv = document.getElementById('rawmarkup').innerHTML;
+		document.getElementById('ondeck').innerHTML = "";
+		document.getElementById('rawmarkup').innerHTML = "";
+		document.FORM.submit();
+		document.getElementById('ondeck').innerHTML = ondeckdiv;
+		document.getElementById('rawmarkup').innerHTML = rawmarkupdiv;
+	}
+	
+	function csv() {
+		var csv_list = "";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				csv_list = csv_list+'"'+QVnames[i][1]+'"';
+				csv_list = csv_list+",";
+			} 
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					csv_list = csv_list+'"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					csv_list = csv_list+'""';
+				}
+				csv_list = csv_list+",";
+			} 			
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+
+		return csv_list;
+	}
+	
+	function getvar(val) {
+		return document.getElementById(val).value;
+	}
+
+	function goto(val) {
+	   answerQ(indexis(val));
+	}
+
+	// h/t http://runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file
+	function save2(filename,content)
+	{
+
+	// I'm using file system support as a proxy for support for this feature. 
+	// Check based on one found at: http://blog.teamtreehouse.com/building-an-html5-text-editor-with-the-filesystem-apis
+	// Handle vendor prefixes.
+	window.requestFileSystem = window.requestFileSystem || 
+							   window.webkitRequestFileSystem;
+	// Check for support.
+	if (window.requestFileSystem) {
+	// content = ID of textarea to save
+	// name = name to save file as, including file extension     
+	// grab the content of the form field and place it into a variable
+	//    var textToWrite = document.getElementById(content).value;
+	//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([content], {type:'text/plain'});
+		
+	// Specify the name of the file to be saved
+		var fileNamecontentAs = filename;
+		
+	// Optionally allow the user to choose a file name by providing 
+	// an imput field in the HTML and using the collected data here
+	// var fileNamecontentAs = txtFileName.text;
+
+	// create a link for our script to 'click'
+		var downloadLink = document.createElement("a");
+	//  supply the name of the file (from the var above).
+	// you could create the name here but using a var
+	// allows more flexability later.
+		downloadLink.download = fileNamecontentAs;
+	// provide text for the link. This will be hidden so you
+	// can actually use anything you want.
+		downloadLink.innerHTML = "My Hidden Link";
+		
+	// allow our code to work in webkit & Gecko based browsers
+	// without the need for a if / else block.
+		window.URL = window.URL || window.webkitURL;
+			  
+	// Create the link Object.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+	// when link is clicked call a function to remove it from
+	// the DOM in case user wants to save a second file.
+		downloadLink.onclick = destroyClickedElement;
+	// make sure the link is hidden.
+		downloadLink.style.display = "none";
+	// add the link to the DOM
+		document.body.appendChild(downloadLink);
+		
+	// click the new link
+		downloadLink.click();
+	} else {
+		alert('This feature is not supported by your browser.');
+	}
+		
+	}
+
+	function destroyClickedElement(event)
+	{
+	// remove the link from the DOM
+		document.body.removeChild(event.target);
+	}
+
+	// EOF
+
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,195 @@
+Video Intro.   Syntax  |   Gallery   GitHub QnA Markup Editor BETA  MarkupStyle   Load File   New 
+Title: Small Firm Efficiency and Security Interview
+Author: Dylan C. Barrett
+Description: This is Class project for Suffolk University Law School <a href= "http://www.codingthelaw.org/">http://www.codingthelaw.org/</a>
+Before:
+<h1 style="text-align:center;">Small Firm Efficiency and Security Q&A</h1><p style="text-align:center;"><a href="http://www.codingthelaw.org/">Coding the Law</a><br>Suffolk University Law School, Fall 2018</p>
+
+Q(intro): Do <b>NOT</b> rely on this interview or treat this interview as legal advice! This interview is a class project and is likely incomplete.
+<p>This is a <a href="http://www.codingthelaw.org/">Coding the Law</a> class project for Suffolk University Law School, Fall 2018</p>
+
+A: By clicking here, I am confirming that I understand:
+	<ol type="1">
+ <li>This Q&A is a <b>class project.</b></li>
+ <li>These questions and results <b>do not</b> constitute legal advice.</li>
+ <li>I <b>should not rely</b> on the information provided in this Q&A.</li>
+ </ol>
+	Q(1.1):GOTO:case_management
+
+Q(case_management): Do you make use of a <b>case management</b> software?
+A(<b>Case Management Software:</b> Case management software may resolve some of the issues in this questionnaire.): Yes
+	DOC(2.1): <x>Case management software may resolve some of the issues in this questionnaire.</x>
+	Q(case_mgmt_yes):GOTO:case_mgmt_warning
+A(<b> Case Management Software:</b> Consider a case management software, as it will solve many of these issues simultaneously.): No
+	DOC(2.2): <x><b> Case Management Software:</b> Consider a case management software, as it will solve many of these issues simultaneously.</x>
+	Q(case_management_2):GOTO:work_personal_computer
+
+Q(case_mgmt_warning): If you make use of Case Management software, some of these questions may not apply. Additionally, your current software may provide embedded solutions to many suggestions provided by this interview. It is recommended you review the features available to you through your software license.
+A: I understand.
+	Q(3.1):GOTO:work_personal_computer
+
+Q(work_personal_computer): Do you store client documents on a work or personal computer? (Locally on the computer's hard drive?)
+A: Yes
+	Q(work_personal_computer_yes): Is this the only place that you store them?
+	A(<b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.): Yes
+		DOC(4.1.1):<x><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</x>
+		Q(work_personal_computer_yes_2):GOTO:computer_pword
+	A: No
+		DOC(4.1.2):<x><b>Local Storage:</b> Storing documents exclusively on a single computer risks losing those files if the computer suffers a fatal error. Additionally, this leaves important documents vulnerable to computer viruses, malware, and ransomware.</x>
+		Q(4.1.2):GOTO:store_docs
+A: No
+	Q(work_personal_computer_no):GOTO:store_docs
+
+Q(store_docs): Where do you store these documents?
+A: Cloud Storage Service
+	Q(cloud_access): Do others have access to this drive?
+	A(<b>Cloud Storage & User Access:</b> Cloud drive services provide users with tools to track access, including who has access to specific documents, folders, and access to the entire drive. Track this information and ensure access is restricted only to those who need it.): Yes
+		DOC(5.1.1):<x><b>Cloud Storage & User Access:</b> Cloud drive services provide users with tools to track access, including who has access to specific documents, folders, and access to the entire drive. Track this information and ensure access is restricted only to those who need it.</x>
+		Q(cloud_access_2):GOTO:client_docs_email
+	A: No
+		Q(cloud_access_3):GOTO:client_docs_email
+A: Local Network Drive
+	Q(local_drive_access): Do others have access to this local drive?
+	A(<b>Local Network Drive Users:</b> Carefully track who has access to networked drives. Consider making use of tools that assign user credentials, limit access, track access, and provide reports. Consider keeping sensitive documents on a separate drive.): Yes
+		DOC(5.2.1):<x>Carefully track who has access to networked drives. Consider making use of tools that assign user credentials, limit access, track access, and provide reports. Consider keeping sensitive documents on a separate drive.</x>
+		Q(local_drive_access_2):GOTO:drive_pword
+	A: No
+		Q(local_drive_access_3):GOTO:client_docs_email
+A: Both
+	Q(5.3):GOTO:client_docs_email
+
+Q(drive_pword): Is the drive password protected?
+A: Yes
+	Q(drive_pword_yes):GOTO:client_docs_email
+A(Files on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect the drive makes it more difficult for adverse parties, viruses, and other risks to access your information.): No
+	DOC(6.2): <x>Files on a network drive is vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect the drive makes it more difficult for adverse parties, viruses, and other risks to access your information.</x>
+	Q(docs_pword): Are documents or folders in the drive password protected?
+	A: Yes
+		Q(docs_pword_yes):GOTO:client_docs_email
+	A(<b>File & Document Passwords:</b> Files and documents on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect important documents makes it more difficult for adverse parties, viruses, and other risks to access your information, however, adding a password to the drive itself is also helpful, and requires fewer passwords.): No
+		DOC(6.2.2): <x><b>File & Document Passwords:</b> Files and documents on a network drive are vulnerable to any unauthorized or malicious party that has access to the network, or even other devices on the network. Adding a password to protect important documents makes it more difficult for adverse parties, viruses, and other risks to access your information, however, adding a password to the drive itself is also helpful, and requires fewer passwords.</x>
+		Q(docs_pword_no):GOTO:client_docs_email
+
+Q(client_docs_email): Do you send sensitive client documents or information over email?
+<p> This includes information you have entered into the body of the E-Mail or information found within attached documents.</p>
+A: Yes
+	Q(client_docs_email_yes):GOTO:client_same
+A: No - <b>NEVER.</b>
+	Q(how_send_if_not_email): How do you send documents to clients?
+	A(<b>Cloud Document Sharing:</b> When sharing documents with others over cloud services, make sure to verify permissions used. If you do not want a recipient to have permanent access to a document, or the ability to alter the document or view changes you might make to the same document, verify that you can set access permissions to expire.): Cloud Sharing Service
+		DOC(7.2.1):<x><b>Cloud Document Sharing:</b> When sharing documents with others over cloud services, make sure to verify permissions used. If you do not want a recipient to have permanent access to a document, or the ability to alter the document or view changes you might make to the same document, verify that you can set access permissions to expire.</X> 
+		Q(7.2.1): Do you use this cloud service to secure signatures for documents that require signing?
+		A: Yes
+			Q(7.2.1.1):GOTO:client_collab
+		A: No
+			Q(7.2.1.2):GOTO:client_sign
+	A: Secure File Sharing Service
+		Q(7.2.2): Do you use this file sharing service to secure signatures?
+		A: Yes
+			Q(7.2.2.1):GOTO:client_collab
+		A: No
+			Q(7.2.2.2):GOTO:client_sign
+	A: None of the Above.
+		Q(7.2.3):GOTO:client_sign
+
+Q(client_same): Do clients do the same?
+A: Yes
+	Q(8.1):GOTO:paid_or_free
+A: No
+	Q(8.2):GOTO:paid_or_free
+
+Q(paid_or_free):Do you use a paid E-mail service, or a free E-mail service?
+A: Paid
+	Q(9.1):GOTO:client_sign
+A(<b>Free E-Mail Service:</b> Free E-Mail providers generally do not have rigorous privacy and data security standards. It is important you research your provider's privacy and security practices and consider making use of a paid E-Mail service.): Free
+	DOC(9.2):<x><b>Free E-Mail Service:</b> Free E-Mail providers generally do not have rigorous privacy and data security standards. It is important you research your provider's privacy and security practices and consider making use of a paid E-Mail service.</x>
+	Q(9.2):GOTO:client_sign
+
+Q(client_sign):How do you have clients (or any other parties) sign documents?
+A(<b>Document Signatures:</b> Consider an E-Signature tool. This allows you to acquire signatures whenever you need them, so long as the signing party has access to a computer, tablet, or smartphone.): Using mail, E-Mail, Fax, or in-person meetings with the person who must sign.
+	DOC(10.1):<x><b>Document Signatures:</b> Consider an E-Signature tool. This allows you to acquire signatures whenever you need them, so long as the signing party has access to a computer, tablet, or smartphone.</x>
+	Q(10.1):GOTO:client_collab
+A: An electronic signature software.
+	Q(10.2):GOTO:client_collab
+
+Q(client_collab): If you need to collaboratively work on a document, such as interrogatories, contracts, motions, etc, with clients or colleagues, do you make use of a screen sharing tool?
+A: Yes
+	Q(11.1):GOTO:computer_pword
+A(<b>Document Collaboration:</b> Try a screen sharing tool! These tools allow you to work on documents in real time with others, with no need to exchange multiple copies.): No
+	DOC(11.2):<x><b>Document Collaboration:</b> Try a screen sharing tool! These tools allow you to work on documents in real time with others, with no need to exchange multiple copies.</x>
+	Q(11.2):GOTO:computer_pword
+
+Q(computer_pword): Is your computer password protected?
+A: Yes
+	Q(computer_pword_yes):GOTO:comp_lock
+A(<b>Computer Password Protection:</b> It is essential that you lock and password protect any computer, personal or business! Make sure to password protect your computer and set it to automatically lock after a period of idleness.): No
+	DOC(12.2):<x><b>Computer Password Protection:</b> It is essential that you lock and password protect any computer, personal or business! Make sure to password protect your computer and set it to automatically lock after a period of idleness.</x>
+	Q(computer_pword_no):GOTO:local_docs_pword
+
+Q(local_docs_pword): Are the documents stored on your computer password protected, and/or are the folders the documents are kept in password protected or encrypted, or both?
+A: Yes
+	Q(local_docs_pword_yes):GOTO:comp_lock
+A: No
+	Q(local_docs_pword_no):GOTO:comp_lock
+
+Q(comp_lock): is your computer hard drive encrypted?
+A: Yes
+	Q(comp_lock_yes):GOTO:smartphone
+A(<b>Hard Drive Encryption:</b> Encrypting your hard drive adds a simple, fast, and free way to reduce your exposure to data theft and other malicious attacks on your computer.): No/Not Sure
+	DOC(14.2):<x><b>Hard Drive Encryption:</b> Encrypting your hard drive adds a simple, fast, and free way to reduce your exposure to data theft and other malicious attacks on your computer.</x>
+	Q(comp_lock_no):GOTO:smartphone
+
+Q(smartphone): do you open case, litigation, or client documents on your smartphone?
+A: Yes
+	Q(smartphone2): do you delete these documents from you smartphone after reading them?
+	A: Yes
+		Q(smartphone3): Is your smartphone's hard drive encrypted?
+		A: Yes
+			Q(smartphone4):GOTO:phone_lock
+		A(<b>Smartphone Encryption:</b> Encrypting your smartphone hard drive is just as important as encrypting your computer hard drive. Consider doing so using an approved application.): No
+			DOC(15.1.1.2):<x><b>Smartphone Encryption:</b> Encrypting your smartphone hard drive is just as important as encrypting your computer hard drive. Consider doing so using an approved application.</x>
+			Q(smartphone5):GOTO:phone_lock
+	A(<b>Smartphone Documents</b>: If you open documents on your smartphone, particularly E-Mail attachments, these documents are typically downloaded and saved locally. If the documents contain sensitive information, consider deleting them after you have read them.): No
+		DOC(15.1.2):<x><b>Smartphone Documents</b>: If you open documents on your smartphone, particularly E-Mail attachments, these documents are typically downloaded and saved locally. If the documents contain sensitive information, consider deleting them after you have read them.</x>
+		Q(15.1.2):GOTO:phone_lock
+	A: Not Sure
+		Q(15.1.3):GOTO:phone_lock
+A: No.
+	Q(15.2):GOTO:isp
+A: I Do not Own a Smartphone.
+	Q(15.3):GOTO:isp
+
+Q(phone_lock): Is your smartphone set to automatically lock?
+A: Yes
+	Q(16.1):GOTO:isp
+A(<b>Smartphone Lock:</b> You should set your phone to lock at all times.): No
+	DOC(16.2):<x><b>Smartphone Lock:</b> You should set your phone to lock at all times.</x>
+	Q(16.2):GOTO:isp
+
+Q(isp): How is your workplace internet access provided?
+A: Through my/our office lease - provided via the building lessor, management company, etc.
+	Q(17.1): Do other organizations or businesses in your office have access to this same network?
+	A(<b>Others Have Network Access:</b> This is a strong risk given you may not have control over other organization's employees, network usage habits, and who they may grant permission of access to. At a minimum consider a Virtual Private Network tool, this will encrypt your network traffic. Ensure any network drives your organization uses are password protected.): Yes
+		DOC(17.1.1):<x><b>Others Have Network Access:</b> This is a strong risk given you may not have control over other organization's employees, network usage habits, and who they may grant permission of access to. At a minimum consider a Virtual Private Network tool, this will encrypt your network traffic. Ensure any network drives your organization uses are password protected.</x>
+		Q(17.1.1):GOTO:17.1.2
+	A: No
+		Q(17.1.2): Do you provide the WiFi password to clients, guests, or others that do not work for your organization?
+		A(<b>Guest Network Access:</b> At a minimum set up a guest network if you are allowing access to your network by users other than those that belong to your organization.): Yes
+			DOC(17.1.2.1):<x><b>Guest Network Access:</b> At a minimum set up a guest network if you are allowing access to your network by users other than those that belong to your organization.</x>
+			Q(17.1.2.1):GOTO:17.1.2.2
+		A: No
+			Q(17.1.2.2): Is your WiFi password posted in writing anywhere in the office?
+			A(<b>Posted WiFi Passwords:</b> A WiFi password your employees can see is a WiFi password guests, delivery people, and even passers-by can see. This may provide easy unwanted access to your network. Consider not posting your WiFi password in the open.): Yes
+				DOC(17.1.2.2.1):<x><b>Posted WiFi Passwords:</b> A WiFi password your employees can see is a WiFi password guests, delivery people, and even passers-by can see. This may provide easy unwanted access to your network. Consider not posting your WiFi password in the open.</x>
+				Q(17.1.2.2.1):GOTO:end
+			A: No
+				Q(17.1.2.2.2):GOTO:end
+A: Through a commercial or business internet service provider.
+	Q(17.2):GOTO:end
+A: Other
+	Q(17.3):GOTO:end
+
+Q(end): Thank you for your time. Please click "Complete" to see suggested changes and potential risks based on your answers.
+A[javascript:submit2('https://www.qnamarkup.org/doc/parse/html/','POST','t','You may download or print the suggestions here.')]: Complete
+	Q(18.1): Thank you.
+     word wrap   |   report bug/issueOutput 
